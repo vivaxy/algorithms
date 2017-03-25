@@ -16,6 +16,7 @@
  *  数组 Array[m, ..., n-1] 中的最大子数组和的值为 A
  *  那么 Array[m, ..., n] 中最大子数组和的值为 A + Array[n] 或者为 Array[n]
  *  我们的算法从 Array[0] 开始进行比较
+ * @see https://leetcode.com/submissions/detail/97926397/
  * @param {number[]} nums
  * @return {number}
  */
