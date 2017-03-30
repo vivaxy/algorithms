@@ -23,11 +23,15 @@
  */
 
 /**
+ * @see https://leetcode.com/submissions/detail/98492145/
  * @param {number[]} nums
  * @return {number[][]}
  */
 var subsetsWithDup = function(nums) {
-    var results = [];
+    nums = nums.sort(function(a, b) {
+        return a > b;
+    });
+    var results = [[]];
     var isSameArray = function(a, b) {
         return JSON.stringify(a) === JSON.stringify(b);
     };
@@ -40,29 +44,29 @@ var subsetsWithDup = function(nums) {
         results.push(array);
     };
 
-    var pickOne = function(from, callback) {
-        for (var i = from; i < nums.length; i++) {
-            callback(nums[i], i);
+    var pick = function(subArray, n, array) {
+        // get n from subArray
+        // get one from subArray, then get n-1 from next subArray
+        for (var i = 0; i < subArray.length - (n - 1); i++) {
+            var current = subArray[i];
+            var nextSubArray = subArray.slice(i + 1);
+            var resultArray = array.slice();
+            resultArray.push(current);
+            if (n - 1 > 0) {
+                pick(nextSubArray, n - 1, resultArray);
+            } else {
+                // do things
+                saveInResults(resultArray);
+            }
         }
     };
 
-    var pickTwo = function(from, callback) {
-        pickOne(from, function(v1, index) {
-            pickOne(index, function(v2) {
-                callback([v1, v2]);
-            });
-        });
-    };
-
-    for (var l = 0; l < nums.length; l++) {
-        // through length
-        for (var i = 0; i < nums.length; i++) {
-            // through from
-        }
+    for (var i = 0; i < nums.length; i++) {
+        pick(nums, i + 1, []);
     }
+
     return results;
 };
 
-console.log(subsetsWithDup([1, 2, 2]));
-console.log(JSON.stringify(subsetsWithDup([1, 2, 2])) === JSON.stringify([[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]));
-console.log(JSON.stringify(subsetsWithDup([1, 2, 3])) === JSON.stringify([[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]));
+console.log(JSON.stringify(subsetsWithDup([1, 2, 2])) === JSON.stringify([[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]));
+console.log(JSON.stringify(subsetsWithDup([1, 2, 3])) === JSON.stringify([[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]]));
