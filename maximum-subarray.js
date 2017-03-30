@@ -11,27 +11,22 @@
  */
 
 /**
- * TODO UNDERSTAND
- * 证明：
- *  数组 Array[m, ..., n-1] 中的最大子数组和的值为 A
- *  那么 Array[m, ..., n] 中最大子数组和的值为 A + Array[n] 或者为 Array[n]
- *  我们的算法从 Array[0] 开始进行比较
+ * 从头开始，记录到当前位置的所有值的和，如果和小于0，说明这段可以舍弃，不包含这段的结果会更大。
+ * 记录下这个最大值作为一个中间结果，比较每一段的和，取最大的
  * @see https://leetcode.com/submissions/detail/97926397/
  * @param {number[]} nums
  * @return {number}
  */
 var maxSubArray = function(nums) {
     var max = nums[0];
-    var currentMax = nums[0];
-    for (var from = 1; from < nums.length; from++) {
-        var n = nums[from];
-        if (currentMax > 0) {
-            currentMax = currentMax + n;
-        } else {
-            currentMax = n;
-        }
-        if (currentMax > max) {
-            max = currentMax;
+    var current = 0;
+    for (var i = 0; i < nums.length; i++) {
+        var n = nums[i];
+        current = current + n;
+        if (current > max) {
+            max = current;
+        } else if (current < 0) {
+            current = 0;
         }
     }
     return max;
