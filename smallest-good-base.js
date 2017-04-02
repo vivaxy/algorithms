@@ -59,21 +59,20 @@ var smallestGoodBase = function(n) {
  * @return {string}
  */
 var smallestGoodBase2 = function(n) {
+    var EPSILON = 0.0000001;
     var input = Number(n);
-    var result = input - 1;
-    for (var k = result; k > 1; k--) {
+    for (var k = 2; k < input; k++) {
         var a = Math.log(input * (k - 1) + 1) / Math.log(k);
         if (a < 1) {
             return '';
-        } else if (parseInt(a) === a) {
-            if (k < result) {
-                result = k;
-            }
+        } else if (parseInt(a) - a < EPSILON && parseInt(a) - a > -EPSILON) {
+            return String(k);
         }
     }
-    return String(result);
 };
 
 console.log(smallestGoodBase2('13') === '3');
 console.log(smallestGoodBase2('4681') === '8');
-console.log(smallestGoodBase2('1000000000000000000') === '999999999999999999');
+console.log(smallestGoodBase2('131407') === '362');
+console.log(smallestGoodBase2('11573') === '11572');
+// console.log(smallestGoodBase2('1000000000000000000') === '999999999999999999');
