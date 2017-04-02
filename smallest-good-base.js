@@ -27,7 +27,6 @@
 
 /**
  * 寻找进制
- * @see
  * @param {string} n
  * @return {string}
  */
@@ -50,6 +49,31 @@ var smallestGoodBase = function(n) {
     }
 };
 
-console.log(smallestGoodBase('13') === '3');
-console.log(smallestGoodBase('4681') === '8');
-console.log(smallestGoodBase('1000000000000000000') === '999999999999999999');
+/**
+ * 由题目
+ *  => n = k^0 + k^1 + k^2 + ... + k^a，a 为正整数，求 k
+ *      => 等比数列求和公式：n = (1 - k^a) / (1 - k)
+ *          => a = log(1 - n * (1 - k)) / log(k)，求最小的 a
+ *              => 浮点精度丢失问题
+ * @param {string} n
+ * @return {string}
+ */
+var smallestGoodBase2 = function(n) {
+    var input = Number(n);
+    var result = input - 1;
+    for (var k = result; k > 1; k--) {
+        var a = Math.log(input * (k - 1) + 1) / Math.log(k);
+        if (a < 1) {
+            return '';
+        } else if (parseInt(a) === a) {
+            if (k < result) {
+                result = k;
+            }
+        }
+    }
+    return String(result);
+};
+
+console.log(smallestGoodBase2('13') === '3');
+console.log(smallestGoodBase2('4681') === '8');
+console.log(smallestGoodBase2('1000000000000000000') === '999999999999999999');
