@@ -24,11 +24,13 @@
  */
 
 /**
+ * @see https://leetcode.com/submissions/detail/101226885/
  * @param {number[]} nums
  * @return {boolean}
  */
 var makesquare = function(nums) {
     var numbersLength = nums.length;
+    var sideCount = 4;
     if (numbersLength <= 0) {
         return false;
     }
@@ -42,7 +44,7 @@ var makesquare = function(nums) {
     var totalLength = sortedNumbers.reduce(function(acc, i) {
         return acc + i;
     }, 0);
-    var sideLength = totalLength / 4;
+    var sideLength = totalLength / sideCount;
     if (sideLength !== parseInt(sideLength, 10)) {
         return false;
     }
@@ -50,40 +52,31 @@ var makesquare = function(nums) {
     if (maxNumber > sideLength) {
         return false;
     }
-    var loopThroughArray = function(array, groupSize, groupCount) {
-        var length = array.length;
-        if (groupCount <= 0) {
-            return length === 0;
-        }
-        var i = 0;
-        var acceptedIndex = [];
-        var remainingSize = groupSize;
-        for (; i < length; i++) {
-            if (remainingSize === 0) {
-                break;
-            }
-            var current = array[i];
-            if (current <= remainingSize) {
-                acceptedIndex.push(i);
-                remainingSize = remainingSize - current;
-            } else {
-                return false;
-            }
-        }
-        if (remainingSize === 0) {
-            var nextArray = array;
-            acceptedIndex.reverse().forEach(function(index) {
-                nextArray = nextArray.slice();
-                nextArray.splice(index, 1);
+    var dfs = function(numbers, numberCount, sides, index, size) {
+        if (index === numberCount) {
+            return sides.every(function(side) {
+                return side === size;
             });
-            return loopThroughArray(nextArray, groupSize, groupCount - 1);
-        } else {
-            return false;
         }
+        for (var i = 0; i < sideCount; i++) {
+            if (sides[i] + numbers[index] > size) {
+                continue;
+            }
+            sides[i] = sides[i] + numbers[index];
+            if (dfs(numbers, numberCount, sides, index + 1, size)) {
+                return true;
+            }
+            sides[i] = sides[i] - numbers[index];
+        }
+        return false;
     };
-    return loopThroughArray(sortedNumbers, sideLength, 4);
+    var startingSides = [];
+    for (var i = 0; i < sideCount; i++) {
+        startingSides.push(0);
+    }
+    return dfs(sortedNumbers, numbersLength, startingSides, 0, sideLength);
 };
 
-// console.log(makesquare([1, 1, 2, 2, 2]) === true);
-// console.log(makesquare([3, 3, 3, 3, 4]) === false);
+console.log(makesquare([1, 1, 2, 2, 2]) === true);
+console.log(makesquare([3, 3, 3, 3, 4]) === false);
 console.log(makesquare([5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3]) === true);
