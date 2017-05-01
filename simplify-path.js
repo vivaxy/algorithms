@@ -36,5 +36,6 @@ var simplifyPath = function(path) {
     return '/' + current.join('/');
 };
 
-console.log(simplifyPath('/home/') === '/home');
-console.log(simplifyPath('/a/./b/../../c/') === '/c');
+var expect = require('./lib').expect;
+expect(simplifyPath('/home/'), '/home');
+expect(simplifyPath('/a/./b/../../c/'), '/c');

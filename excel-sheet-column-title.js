@@ -38,6 +38,7 @@ var convertToTitle = function(n) {
     return results;
 };
 
-console.log(convertToTitle(1) === 'A');
-console.log(convertToTitle(26) === 'Z');
-console.log(convertToTitle(28) === 'AB');
+var expect = require('./lib').expect;
+expect(convertToTitle(1), 'A');
+expect(convertToTitle(26), 'Z');
+expect(convertToTitle(28), 'AB');

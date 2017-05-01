@@ -66,5 +66,6 @@ var hammingDistance2 = function(x, y) {
     return count;
 };
 
-console.log(hammingDistance(1, 4) === 2);
-console.log(hammingDistance2(1, 4) === 2);
+var expect = require('./lib').expect;
+expect(hammingDistance(1, 4), 2);
+expect(hammingDistance2(1, 4), 2);

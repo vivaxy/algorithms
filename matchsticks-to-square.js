@@ -77,6 +77,7 @@ var makesquare = function(nums) {
     return dfs(sortedNumbers, numbersLength, startingSides, 0, sideLength);
 };
 
-console.log(makesquare([1, 1, 2, 2, 2]) === true);
-console.log(makesquare([3, 3, 3, 3, 4]) === false);
-console.log(makesquare([5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3]) === true);
+var expect = require('./lib').expect;
+expect(makesquare([1, 1, 2, 2, 2]), true);
+expect(makesquare([3, 3, 3, 3, 4]), false);
+expect(makesquare([5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3]), true);

@@ -71,8 +71,9 @@ var smallestGoodBase2 = function(n) {
     }
 };
 
-console.log(smallestGoodBase2('13') === '3');
-console.log(smallestGoodBase2('4681') === '8');
-console.log(smallestGoodBase2('131407') === '362');
-console.log(smallestGoodBase2('11573') === '11572');
-// console.log(smallestGoodBase2('1000000000000000000') === '999999999999999999');
+var expect = require('./lib').expect;
+expect(smallestGoodBase2('13'), '3');
+expect(smallestGoodBase2('4681'), '8');
+expect(smallestGoodBase2('131407'), '362');
+expect(smallestGoodBase2('11573'), '11572');
+// expect(smallestGoodBase2('1000000000000000000'), '999999999999999999');
