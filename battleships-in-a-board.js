@@ -25,7 +25,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/101828331/
- * @param {Array[][]} board
+ * @param {String[][]} board
  * @return {number}
  */
 var countBattleships = function(board) {
@@ -64,8 +64,33 @@ var countBattleships = function(board) {
     return ships;
 };
 
+/**
+ * @see https://leetcode.com/submissions/detail/101830777/
+ * @param {String[][]} board
+ * @return {number}
+ */
+var countBattleships2 = function(board) {
+    var ships = 0;
+    for (var i = 0; i < board.length; i++) {
+        for (var j = 0; j < board[i].length; j++) {
+            if (board[i][j] === '.') continue;
+            if (i !== 0 && board[i - 1][j] === 'X') continue;
+            if (j !== 0 && board[i][j - 1] === 'X') continue;
+            ships++;
+        }
+    }
+    return ships;
+};
+
 var expect = require('./lib').expect;
 expect(countBattleships(
+    [
+        ['X', '.', 'X'],
+        ['.', '.', 'X'],
+        ['.', '.', 'X']
+    ]
+), 2);
+expect(countBattleships2(
     [
         ['X', '.', 'X'],
         ['.', '.', 'X'],
