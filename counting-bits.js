@@ -34,7 +34,27 @@ var countBits = function(num) {
     return results;
 };
 
+/**
+ * @see https://leetcode.com/submissions/detail/102035894/
+ * f(i) = f((i - i % 2) / 2) + i % 2
+ * @param {number} num
+ * @return {number[]}
+ */
+var countBits2 = function(num) {
+    var results = [0];
+    for (var i = 1; i <= num; i++) {
+        var remaining = i % 2;
+        var prev = (i - remaining) / 2;
+        var current = results[prev] + remaining;
+        results.push(current);
+    }
+    return results;
+};
+
 var expect = require('./lib').expect;
 var isSameArray = require('./lib').isSameArray;
 expect(isSameArray(countBits(5), [0, 1, 1, 2, 1, 2]), true);
 expect(isSameArray(countBits(2), [0, 1, 1]), true);
+
+expect(isSameArray(countBits2(5), [0, 1, 1, 2, 1, 2]), true);
+expect(isSameArray(countBits2(2), [0, 1, 1]), true);
