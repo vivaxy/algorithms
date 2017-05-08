@@ -25,7 +25,7 @@
  */
 
 /**
- * @see https://leetcode.com/submissions/detail/102204375/
+ * @see https://leetcode.com/submissions/detail/102282640/
  * @param {number[]} candies
  * @return {number}
  */
@@ -40,13 +40,11 @@ var distributeCandies = function(candies) {
         return results;
     };
     var deduplicatedCandies = deduplicateArray(candies);
-    if (deduplicatedCandies.length > candies.length / 2) {
-        return candies.length / 2;
-    }
-    return deduplicatedCandies.length;
+    return Math.min(deduplicatedCandies.length, candies.length / 2);
 };
 
 var expect = require('./lib').expect;
+
 expect(distributeCandies([1, 1, 2, 2, 3, 3]), 3);
 expect(distributeCandies([1, 1, 2, 3]), 2);
 expect(distributeCandies([0, 0, 14, 0, 10, 0, 0, 0]), 3);
