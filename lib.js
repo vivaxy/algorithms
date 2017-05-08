@@ -10,9 +10,18 @@
  * @returns {boolean}
  */
 exports.isSameArray = function(array1, array2) {
-    return JSON.stringify(array1) === JSON.stringify(array2);
+    var result = JSON.stringify(array1) === JSON.stringify(array2);
+    if (!result) {
+        console.log('isSameArray error:', array1, array2);
+    }
+    return result;
 };
 
 exports.expect = function(result, to) {
-    console.log(result === to);
+    var res = result === to;
+    if (!res) {
+        console.log('expect error:', result, to);
+    } else {
+        console.log(res);
+    }
 };
