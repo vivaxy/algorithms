@@ -74,7 +74,7 @@ var findBottomLeftValue = function(root) {
     return parseTreeNode(root, 0).val;
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 var case1 = {
     val: 2,
     left: {

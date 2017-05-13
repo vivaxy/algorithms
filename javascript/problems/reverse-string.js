@@ -19,5 +19,5 @@ var reverseString = function(s) {
     return s.split('').reverse().join('');
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 expect(reverseString('hello'), 'olleh');

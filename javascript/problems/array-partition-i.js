@@ -33,6 +33,6 @@ var arrayPairSum = function(nums) {
     }, 0);
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 expect(arrayPairSum([1, 4, 3, 2]), 4);
 expect(arrayPairSum([11, 41, -9046, 2047, 1118, 8477, 8446, 279, 4925, 7380, -1719, 3855]), 6662);

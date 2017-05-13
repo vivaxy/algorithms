@@ -33,5 +33,5 @@ var minMoves = function(nums) {
     }, 0);
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 expect(minMoves([1, 2, 3]), 3);

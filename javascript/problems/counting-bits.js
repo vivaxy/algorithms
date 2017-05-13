@@ -51,8 +51,8 @@ var countBits2 = function(num) {
     return results;
 };
 
-var expect = require('./lib').expect;
-var isSameArray = require('./lib').isSameArray;
+var expect = require('../lib').expect;
+var isSameArray = require('../lib').isSameArray;
 expect(isSameArray(countBits(5), [0, 1, 1, 2, 1, 2]), true);
 expect(isSameArray(countBits(2), [0, 1, 1]), true);
 

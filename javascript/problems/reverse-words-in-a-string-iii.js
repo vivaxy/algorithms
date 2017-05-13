@@ -23,5 +23,5 @@ var reverseWords = function(s) {
     }).join(' ');
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 expect(reverseWords('Let\'s take LeetCode contest'), 's\'teL ekat edoCteeL tsetnoc');

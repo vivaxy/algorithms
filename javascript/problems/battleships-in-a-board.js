@@ -82,7 +82,7 @@ var countBattleships2 = function(board) {
     return ships;
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 expect(countBattleships(
     [
         ['X', '.', 'X'],

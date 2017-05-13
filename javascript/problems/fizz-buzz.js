@@ -55,8 +55,8 @@ var fizzBuzz = function(n) {
     return results;
 };
 
-var expect = require('./lib').expect;
-var isSameArray = require('./lib').isSameArray;
+var expect = require('../lib').expect;
+var isSameArray = require('../lib').isSameArray;
 expect(isSameArray(fizzBuzz(15), [
     '1',
     '2',

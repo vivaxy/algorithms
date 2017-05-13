@@ -46,7 +46,7 @@ var optimalDivision = function(nums) {
     return beginning + '/(' + nums.join('/') + ')';
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 expect(optimalDivision([1000, 100, 10, 2]), '1000/(100/10/2)');
 expect(optimalDivision([1000]), '1000');
 expect(optimalDivision([1000, 10]), '1000/10');

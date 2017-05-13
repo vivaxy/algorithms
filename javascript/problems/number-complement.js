@@ -32,6 +32,6 @@ var findComplement = function(num) {
     return parseInt(flippedBinary.join(''), 2);
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 expect(findComplement(5), 2);
 expect(findComplement(1), 0);

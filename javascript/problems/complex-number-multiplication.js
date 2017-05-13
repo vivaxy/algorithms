@@ -53,6 +53,6 @@ var complexNumberMultiply = function(a, b) {
     return convertToString(result);
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 expect(complexNumberMultiply('1+1i', '1+1i'), '0+2i');
 expect(complexNumberMultiply('1+-1i', '1+-1i'), '0+-2i');

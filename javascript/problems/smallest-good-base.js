@@ -71,7 +71,7 @@ var smallestGoodBase2 = function(n) {
     }
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 expect(smallestGoodBase2('13'), '3');
 expect(smallestGoodBase2('4681'), '8');
 expect(smallestGoodBase2('131407'), '362');

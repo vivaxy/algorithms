@@ -43,7 +43,7 @@ var distributeCandies = function(candies) {
     return Math.min(deduplicatedCandies.length, candies.length / 2);
 };
 
-var expect = require('./lib').expect;
+var expect = require('../lib').expect;
 
 expect(distributeCandies([1, 1, 2, 2, 3, 3]), 3);
 expect(distributeCandies([1, 1, 2, 3]), 2);
