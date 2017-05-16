@@ -19,11 +19,40 @@
  */
 
 /**
+ * 前一个值表示权重，需要下降到 0 开始，中间差 1
+ * 后一个值表示顺序
+ * 前一个值 + 后一个值 的结果排序
+ * 相同的结果以后一个值排序
  * @param {number[][]} people
  * @return {number[][]}
  */
 var reconstructQueue = function(people) {
-
+    var peopleHeight = [];
+    people.forEach(function(p) {
+        var height = p[0];
+        if (peopleHeight.indexOf(height) === -1) {
+            peopleHeight.push(height);
+        }
+    });
+    var sortedPeopleHeight = peopleHeight.sort(function(p, n) {
+        return p - n;
+    });
+    return people.sort(function(prev, next) {
+        var prevHeight = prev[0];
+        var prevBeforeCount = prev[1];
+        var prevWeight = sortedPeopleHeight.indexOf(prevHeight);
+        var prevOrder = prevWeight + prevBeforeCount;
+        var nextHeight = next[0];
+        var nextBeforeCount = next[1];
+        var nextWeight = sortedPeopleHeight.indexOf(nextHeight);
+        var nextOrder = nextWeight + nextBeforeCount;
+        var diff = prevOrder - nextOrder;
+        console.log(prev, next, diff, prevBeforeCount - nextBeforeCount);
+        if (diff === 0) {
+            return prevBeforeCount - nextBeforeCount;
+        }
+        return diff;
+    });
 };
 
 var expect = require('../lib').expect;
