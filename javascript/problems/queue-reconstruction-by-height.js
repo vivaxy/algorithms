@@ -19,42 +19,45 @@
  */
 
 /**
- * 前一个值表示权重，需要下降到 0 开始，中间差 1
- * 后一个值表示顺序
- * 前一个值 + 后一个值 的结果排序
- * 相同的结果以后一个值排序
+ * @see https://leetcode.com/submissions/detail/103145734/
  * @param {number[][]} people
  * @return {number[][]}
  */
 var reconstructQueue = function(people) {
-    var peopleHeight = [];
-    people.forEach(function(p) {
-        var height = p[0];
-        if (peopleHeight.indexOf(height) === -1) {
-            peopleHeight.push(height);
-        }
-    });
-    var sortedPeopleHeight = peopleHeight.sort(function(p, n) {
-        return p - n;
-    });
-    return people.sort(function(prev, next) {
+    var sortedPeople = people.sort(function(prev, next) {
         var prevHeight = prev[0];
-        var prevBeforeCount = prev[1];
-        var prevWeight = sortedPeopleHeight.indexOf(prevHeight);
-        var prevOrder = prevWeight + prevBeforeCount;
         var nextHeight = next[0];
-        var nextBeforeCount = next[1];
-        var nextWeight = sortedPeopleHeight.indexOf(nextHeight);
-        var nextOrder = nextWeight + nextBeforeCount;
-        var diff = prevOrder - nextOrder;
-        console.log(prev, next, diff, prevBeforeCount - nextBeforeCount);
-        if (diff === 0) {
-            return prevBeforeCount - nextBeforeCount;
+        if (prevHeight === nextHeight) {
+            return prev[1] - next[1];
         }
-        return diff;
+        return prevHeight - nextHeight;
     });
+    var maxCursor = sortedPeople.length - 1;
+    for (var cursor = maxCursor; cursor >= 0; cursor--) {
+        var thisPerson = sortedPeople[cursor];
+        var thisHeight = thisPerson[0];
+        var thisOrder = thisPerson[1];
+        var nowOrder = 0;
+        for (var i = 0; i < cursor; i++) {
+            if (sortedPeople[i][0] >= thisHeight) {
+                nowOrder++;
+            }
+        }
+        var orderDiff = thisOrder - nowOrder;
+        if (orderDiff !== 0) {
+            var targetPosition = cursor + orderDiff;
+            sortedPeople.splice(cursor, 1);
+            sortedPeople.splice(targetPosition, 0, thisPerson);
+        }
+    }
+    return sortedPeople;
 };
 
 var expect = require('../lib').expect;
 var isSameArray = require('../lib').isSameArray;
-expect(isSameArray(reconstructQueue([[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]), [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]), true);
+expect(isSameArray(
+    reconstructQueue(
+        [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
+    ),
+    [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
+), true);
