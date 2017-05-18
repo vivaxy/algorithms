@@ -53,10 +53,42 @@ var reconstructQueue = function(people) {
     return sortedPeople;
 };
 
+/**
+ * 1. 正序，其中高度相同的按照 person[1] 倒序
+ * 2. 从最后一个开始把人放进新的队列中，放到第 person[1] 位
+ * @see https://leetcode.com/submissions/detail/103266407/
+ * @param {number[][]} people
+ * @return {number[][]}
+ */
+var reconstructQueue2 = function(people) {
+    var sortedPeople = people.sort(function(prev, next) {
+        var prevHeight = prev[0];
+        var nextHeight = next[0];
+        if (prevHeight === nextHeight) {
+            return next[1] - prev[1];
+        }
+        return prevHeight - nextHeight;
+    });
+    var result = [];
+    while (sortedPeople.length) {
+        var thisPerson = sortedPeople.pop();
+        result.splice(thisPerson[1], 0, thisPerson);
+    }
+    return result;
+};
+
 var expect = require('../lib').expect;
 var isSameArray = require('../lib').isSameArray;
+
 expect(isSameArray(
     reconstructQueue(
+        [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
+    ),
+    [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
+), true);
+
+expect(isSameArray(
+    reconstructQueue2(
         [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
     ),
     [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
