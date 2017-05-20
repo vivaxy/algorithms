@@ -31,13 +31,35 @@
  */
 
 /**
+ * @see https://leetcode.com/submissions/detail/103465675/
+ * 1. [1, 2, 3, 4] diff => [1, 1, 1]
+ * 2. find sibling same items, get length
+ * 3. (n - 1) * (n - 2) / 2, where n is the array length, as previous step's result + 1
  * @param {number[]} A
  * @return {number}
  */
 var numberOfArithmeticSlices = function(A) {
-
+    var diffArray = [];
+    for (var i = 0; i < A.length - 1; i++) {
+        diffArray.push(A[i + 1] - A[i]);
+    }
+    var resultsArray = [];
+    var current = 0;
+    for (var j = 0; j < diffArray.length - 1; j++) {
+        if (diffArray[j] === diffArray[j + 1]) {
+            current++;
+        } else {
+            resultsArray.push(current + 2);
+            current = 0;
+        }
+    }
+    if (current > 0) {
+        resultsArray.push(current + 2);
+    }
+    return resultsArray.reduce(function(acc, cur) {
+        return (cur - 1) * (cur - 2) / 2 + acc;
+    }, 0);
 };
 
 var expect = require('../lib').expect;
-expect(numberOfArithmeticSlices([1, 4, 3, 2]), 4);
-expect(numberOfArithmeticSlices([11, 41, -9046, 2047, 1118, 8477, 8446, 279, 4925, 7380, -1719, 3855]), 6662);
+expect(numberOfArithmeticSlices([1, 2, 3, 4]), 3);
