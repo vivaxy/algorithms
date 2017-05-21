@@ -30,8 +30,8 @@
 
  */
 
-/**
- * @see https://leetcode.com/submissions/detail/103465675/
+/**g
+ * @see https://leetcode.com/submissions/detail/103517773/
  * 1. [1, 2, 3, 4] diff => [1, 1, 1]
  * 2. find sibling same items, get length
  * 3. (n - 1) * (n - 2) / 2, where n is the array length, as previous step's result + 1
@@ -45,17 +45,20 @@ var numberOfArithmeticSlices = function(A) {
     }
     var resultsArray = [];
     var current = 0;
+    var saveResultAndReset = function() {
+        if (current > 0) {
+            resultsArray.push(current + 2);
+        }
+        current = 0;
+    };
     for (var j = 0; j < diffArray.length - 1; j++) {
         if (diffArray[j] === diffArray[j + 1]) {
             current++;
         } else {
-            resultsArray.push(current + 2);
-            current = 0;
+            saveResultAndReset();
         }
     }
-    if (current > 0) {
-        resultsArray.push(current + 2);
-    }
+    saveResultAndReset();
     return resultsArray.reduce(function(acc, cur) {
         return (cur - 1) * (cur - 2) / 2 + acc;
     }, 0);
