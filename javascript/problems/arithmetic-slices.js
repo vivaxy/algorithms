@@ -30,7 +30,7 @@
 
  */
 
-/**g
+/**
  * @see https://leetcode.com/submissions/detail/103517773/
  * 1. [1, 2, 3, 4] diff => [1, 1, 1]
  * 2. find sibling same items, get length
@@ -64,5 +64,25 @@ var numberOfArithmeticSlices = function(A) {
     }, 0);
 };
 
+/**
+ * @see https://leetcode.com/submissions/detail/103518125/
+ * @param {number[]} A
+ * @return {number}
+ */
+var numberOfArithmeticSlices2 = function(A) {
+    var current = 0;
+    var sum = 0;
+    for (var i = 0; i < A.length - 2; i++) {
+        if (A[i + 2] - A[i + 1] === A[i + 1] - A[i]) {
+            current++;
+            sum = sum + current;
+        } else {
+            current = 0;
+        }
+    }
+    return sum;
+};
+
 var expect = require('../lib').expect;
 expect(numberOfArithmeticSlices([1, 2, 3, 4]), 3);
+expect(numberOfArithmeticSlices2([1, 2, 3, 4]), 3);
