@@ -79,8 +79,9 @@ var countArrangement = function(N) {
         count = count * results.length;
         matching[i] = results;
     }
-    return count;
+    return count / 2;
 };
 
 var expect = require('../lib').expect;
 expect(countArrangement(2), 2);
+expect(countArrangement(3), 3);
