@@ -12,7 +12,7 @@
 exports.isSameArray = function(array1, array2) {
     var result = JSON.stringify(array1) === JSON.stringify(array2);
     if (!result) {
-        console.log('isSameArray error:\n', array1, '\n', array2);
+        throw new Error(array1 + ' is not same as ', array2);
     }
     return result;
 };
@@ -20,8 +20,7 @@ exports.isSameArray = function(array1, array2) {
 exports.expect = function(result, to) {
     var res = result === to;
     if (!res) {
-        console.log('expect error:\n', result, '\n', to);
-    } else {
-        console.log(res);
+        throw new Error('expect ' + result + ' to be ' + to);
     }
+    return res;
 };

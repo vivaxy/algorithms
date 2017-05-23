@@ -31,6 +31,7 @@
  */
 
 /**
+ * @see https://leetcode.com/submissions/detail/103732980/
  *     1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18  .  .  .
  *  1  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
  *  2  x  x     x     x     x     x     x     x     x     x
@@ -57,31 +58,33 @@
  * @return {number}
  */
 var countArrangement = function(N) {
-    var matching = {};
-    var count = 1;
-    for (var i = 1; i <= N; i++) {
-        // i => base
-        var results = [];
-        for (var j = 1; j <= N; j++) {
-            // j => matching
-            if (j < i) {
-                if (matching[j].indexOf(i) !== -1) {
-                    results.push(j);
-                }
-            } else if (j === i) {
-                results.push(j);
-            } else {
-                if (j % i === 0) {
-                    results.push(j);
-                }
+    var createArray = function(length) {
+        var array = [];
+        for (var i = 1; i < length + 1; i++) {
+            array.push(i);
+        }
+        return array;
+    };
+    var count = 0;
+    var arrange = function(array, position) {
+        if (array.length === 0) {
+            count++;
+            return;
+        }
+        for (var i = 0; i < array.length; i++) {
+            var nextArray = array.slice();
+            var currentValue = nextArray.splice(i, 1)[0];
+            if (position % currentValue === 0 || currentValue % position === 0) {
+                arrange(nextArray, position + 1);
             }
         }
-        count = count * results.length;
-        matching[i] = results;
-    }
-    return count / 2;
+    };
+    var array = createArray(N);
+    arrange(array, 1);
+    return count;
 };
 
 var expect = require('../lib').expect;
 expect(countArrangement(2), 2);
 expect(countArrangement(3), 3);
+expect(countArrangement(4), 8);
