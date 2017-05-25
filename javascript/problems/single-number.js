@@ -11,16 +11,23 @@
  */
 
 /**
- * @see
+ * @see https://leetcode.com/submissions/detail/103949051/
  * @param {number[]} nums
  * @return {number}
  */
 var singleNumber = function(nums) {
-    var index = 0;
-    var current = nums[index];
-    while (current !== undefined) {
-
+    var savedNums = [];
+    for (var i = 0; i < nums.length; i++) {
+        var current = nums[i];
+        var index = savedNums.indexOf(current);
+        if (index === -1) {
+            // not found
+            savedNums.push(current);
+        } else {
+            savedNums.splice(index, 1);
+        }
     }
+    return savedNums[0];
 };
 
 var expect = require('../lib').expect;
