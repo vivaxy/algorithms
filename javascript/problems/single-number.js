@@ -30,7 +30,21 @@ var singleNumber = function(nums) {
     return savedNums[0];
 };
 
+/**
+ * @see https://leetcode.com/submissions/detail/103949647/
+ * @param {number[]} nums
+ * @return {number}
+ */
+var singleNumber2 = function(nums) {
+    return nums.reduce(function(acc, cur) {
+        return acc ^ cur;
+    });
+};
+
 var expect = require('../lib').expect;
 expect(singleNumber([1]), 1);
 expect(singleNumber([1, 2, 2]), 1);
 expect(singleNumber([1, 2, 2, 1, 1]), 1);
+expect(singleNumber2([1]), 1);
+expect(singleNumber2([1, 2, 2]), 1);
+expect(singleNumber2([1, 2, 2, 1, 1]), 1);
