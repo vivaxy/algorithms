@@ -51,10 +51,9 @@ var countBits2 = function(num) {
     return results;
 };
 
-var expect = require('../lib').expect;
-var isSameArray = require('../lib').isSameArray;
-expect(isSameArray(countBits(5), [0, 1, 1, 2, 1, 2]), true);
-expect(isSameArray(countBits(2), [0, 1, 1]), true);
+var expectToBeSameArray = require('../lib').expectToBeSameArray;
+expectToBeSameArray(countBits(5), [0, 1, 1, 2, 1, 2]);
+expectToBeSameArray(countBits(2), [0, 1, 1]);
 
-expect(isSameArray(countBits2(5), [0, 1, 1, 2, 1, 2]), true);
-expect(isSameArray(countBits2(2), [0, 1, 1]), true);
+expectToBeSameArray(countBits2(5), [0, 1, 1, 2, 1, 2]);
+expectToBeSameArray(countBits2(2), [0, 1, 1]);

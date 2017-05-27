@@ -49,6 +49,5 @@ var findWords = function(words) {
     return words.filter(isWordsOnlyContainsLettersInOneRow);
 };
 
-var expect = require('../lib').expect;
-var isSameArray = require('../lib').isSameArray;
-expect(isSameArray(findWords(['Hello', 'Alaska', 'Dad', 'Peace']), ['Alaska', 'Dad']), true);
+var expectToBeSameArray = require('../lib').expectToBeSameArray;
+expectToBeSameArray(findWords(['Hello', 'Alaska', 'Dad', 'Peace']), ['Alaska', 'Dad']);

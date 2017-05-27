@@ -55,9 +55,8 @@ var fizzBuzz = function(n) {
     return results;
 };
 
-var expect = require('../lib').expect;
-var isSameArray = require('../lib').isSameArray;
-expect(isSameArray(fizzBuzz(15), [
+var expectToBeSameArray = require('../lib').expectToBeSameArray;
+expectToBeSameArray(fizzBuzz(15), [
     '1',
     '2',
     'Fizz',
@@ -73,5 +72,5 @@ expect(isSameArray(fizzBuzz(15), [
     '13',
     '14',
     'FizzBuzz'
-]), true);
-expect(isSameArray(fizzBuzz(1), ['1']), true);
+]);
+expectToBeSameArray(fizzBuzz(1), ['1']);

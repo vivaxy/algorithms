@@ -68,7 +68,6 @@ var subsetsWithDup = function(nums) {
     return results;
 };
 
-var expect = require('../lib').expect;
-var isSameArray = require('../lib').isSameArray;
-expect(isSameArray(subsetsWithDup([1, 2, 2]), [[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]), true);
-expect(isSameArray(subsetsWithDup([1, 2, 3]), [[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]]), true);
+var expectToBeSameArray = require('../lib').expectToBeSameArray;
+expectToBeSameArray(subsetsWithDup([1, 2, 2]), [[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]);
+expectToBeSameArray(subsetsWithDup([1, 2, 3]), [[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]]);

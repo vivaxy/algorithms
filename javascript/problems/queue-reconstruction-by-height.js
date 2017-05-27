@@ -77,19 +77,18 @@ var reconstructQueue2 = function(people) {
     return result;
 };
 
-var expect = require('../lib').expect;
-var isSameArray = require('../lib').isSameArray;
+var expectToBeSameArray = require('../lib').expectToBeSameArray;
 
-expect(isSameArray(
+expectToBeSameArray(
     reconstructQueue(
         [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
     ),
     [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
-), true);
+);
 
-expect(isSameArray(
+expectToBeSameArray(
     reconstructQueue2(
         [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
     ),
     [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
-), true);
+);
