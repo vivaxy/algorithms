@@ -24,16 +24,22 @@ exports.expectToBeSameArray = function(array1, array2) {
  * @returns {Boolean}
  */
 exports.expectToBeSameSet = function(array1, array2) {
+    var throwError = function() {
+        throw new Error(array1 + ' is not the same set as ' + array2);
+    };
     if (array1.length !== array2.length) {
-        return false;
+        throwError();
     }
     var sortNumber = function(prev, next) {
         return prev - next;
     };
     var sortedArray1 = array1.sort(sortNumber);
     var sortedArray2 = array2.sort(sortNumber);
-    console.log(sortedArray1, sortedArray2);
-    return exports.expectToBeSameArray(sortedArray1, sortedArray2);
+    var result = JSON.stringify(sortedArray1) === JSON.stringify(sortedArray2);
+    if (!result) {
+        throwError();
+    }
+    return result;
 };
 
 exports.expect = function(result, to) {
