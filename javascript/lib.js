@@ -12,7 +12,7 @@
 exports.expectToBeSameArray = function(array1, array2) {
     var result = JSON.stringify(array1) === JSON.stringify(array2);
     if (!result) {
-        throw new Error(array1 + ' is not same as ' + array2);
+        throw new Error('`' + array1 + '` is not same as `' + array2 + '`');
     }
     return result;
 };
@@ -25,7 +25,7 @@ exports.expectToBeSameArray = function(array1, array2) {
  */
 exports.expectToBeSameSet = function(array1, array2) {
     var throwError = function() {
-        throw new Error(array1 + ' is not the same set as ' + array2);
+        throw new Error('`' + array1 + '` is not the same set as `' + array2 + '`');
     };
     if (array1.length !== array2.length) {
         throwError();
@@ -45,7 +45,7 @@ exports.expectToBeSameSet = function(array1, array2) {
 exports.expect = function(result, to) {
     var res = result === to;
     if (!res) {
-        throw new Error('expect ' + result + ' to be ' + to);
+        throw new Error('expect `' + result + '` to be `' + to + '`');
     }
     return res;
 };
