@@ -95,3 +95,4 @@ var treeNode = {
     }
 };
 expectToBeSameArray(largestValues(treeNode), [1, 3, 9]);
+expectToBeSameArray(largestValues(null), []);
