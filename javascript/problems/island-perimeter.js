@@ -48,12 +48,14 @@ var islandPerimeter = function(grid) {
     return result;
 };
 
-var expect = require('../lib').expect;
-expect(islandPerimeter(
-    [
-        [0, 1, 0, 0],
-        [1, 1, 1, 0],
-        [0, 1, 0, 0],
-        [1, 1, 0, 0]
-    ]
-), 16);
+var test = require('ava');
+test('island-perimeter', function(t) {
+    t.is(islandPerimeter(
+        [
+            [0, 1, 0, 0],
+            [1, 1, 1, 0],
+            [0, 1, 0, 0],
+            [1, 1, 0, 0]
+        ]
+    ), 16);
+});

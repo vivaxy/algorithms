@@ -23,5 +23,7 @@ var reverseWords = function(s) {
     }).join(' ');
 };
 
-var expect = require('../lib').expect;
-expect(reverseWords('Let\'s take LeetCode contest'), 's\'teL ekat edoCteeL tsetnoc');
+var test = require('ava');
+test('reverse-words-in-a-string-iii', function(t) {
+    t.is(reverseWords('Let\'s take LeetCode contest'), 's\'teL ekat edoCteeL tsetnoc');
+});

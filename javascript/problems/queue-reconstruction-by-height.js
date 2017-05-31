@@ -77,18 +77,18 @@ var reconstructQueue2 = function(people) {
     return result;
 };
 
-var expectToBeSameArray = require('../lib').expectToBeSameArray;
-
-expectToBeSameArray(
-    reconstructQueue(
-        [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
-    ),
-    [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
-);
-
-expectToBeSameArray(
-    reconstructQueue2(
-        [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
-    ),
-    [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
-);
+var test = require('ava');
+test('queue-reconstruction-by-height', function(t) {
+    t.deepEqual(
+        reconstructQueue(
+            [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
+        ),
+        [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
+    );
+    t.deepEqual(
+        reconstructQueue2(
+            [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
+        ),
+        [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
+    );
+});

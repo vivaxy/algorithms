@@ -51,16 +51,18 @@ var findRestaurant = function(list1, list2) {
     return results;
 };
 
-var expectToBeSameSet = require('../lib').expectToBeSameSet;
-expectToBeSameSet(findRestaurant(
-    ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
-    ['Piatti', 'The Grill at Torrey Pines', 'Hungry Hunter Steakhouse', 'Shogun']
-), ['Shogun']);
-expectToBeSameSet(findRestaurant(
-    ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
-    ['KFC', 'Shogun', 'Burger King']
-), ['Shogun']);
-expectToBeSameSet(findRestaurant(
-    ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
-    ['KFC', 'Burger King', 'Tapioca Express', 'Shogun']
-), ['KFC', 'Burger King', 'Tapioca Express', 'Shogun']);
+var test = require('ava');
+test('minimum-index-sum-of-two-lists', function(t) {
+    t.deepEqual(findRestaurant(
+        ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
+        ['Piatti', 'The Grill at Torrey Pines', 'Hungry Hunter Steakhouse', 'Shogun']
+    ), ['Shogun']);
+    t.deepEqual(findRestaurant(
+        ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
+        ['KFC', 'Shogun', 'Burger King']
+    ), ['Shogun']);
+    t.deepEqual(findRestaurant(
+        ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
+        ['KFC', 'Burger King', 'Tapioca Express', 'Shogun']
+    ), ['KFC', 'Burger King', 'Tapioca Express', 'Shogun']);
+});

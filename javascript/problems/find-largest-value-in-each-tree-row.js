@@ -68,31 +68,33 @@ var largestValues = function(root) {
     return results;
 };
 
-var expectToBeSameArray = require('../lib').expectToBeSameArray;
-var treeNode = {
-    val: 1,
-    left: {
-        val: 3,
+var test = require('ava');
+test('find-largest-value-in-each-tree-row', function(t) {
+    var treeNode = {
+        val: 1,
         left: {
-            val: 5,
-            left: null,
-            right: null
+            val: 3,
+            left: {
+                val: 5,
+                left: null,
+                right: null
+            },
+            right: {
+                val: 3,
+                left: null,
+                right: null
+            }
         },
         right: {
-            val: 3,
+            val: 2,
             left: null,
-            right: null
+            right: {
+                val: 9,
+                left: null,
+                right: null
+            }
         }
-    },
-    right: {
-        val: 2,
-        left: null,
-        right: {
-            val: 9,
-            left: null,
-            right: null
-        }
-    }
-};
-expectToBeSameArray(largestValues(treeNode), [1, 3, 9]);
-expectToBeSameArray(largestValues(null), []);
+    };
+    t.deepEqual(largestValues(treeNode), [1, 3, 9]);
+    t.deepEqual(largestValues(null), []);
+});

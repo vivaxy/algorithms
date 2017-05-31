@@ -19,5 +19,7 @@ var reverseString = function(s) {
     return s.split('').reverse().join('');
 };
 
-var expect = require('../lib').expect;
-expect(reverseString('hello'), 'olleh');
+var test = require('ava');
+test('reverse-string', function(t) {
+    t.is(reverseString('hello'), 'olleh');
+});

@@ -55,22 +55,24 @@ var fizzBuzz = function(n) {
     return results;
 };
 
-var expectToBeSameArray = require('../lib').expectToBeSameArray;
-expectToBeSameArray(fizzBuzz(15), [
-    '1',
-    '2',
-    'Fizz',
-    '4',
-    'Buzz',
-    'Fizz',
-    '7',
-    '8',
-    'Fizz',
-    'Buzz',
-    '11',
-    'Fizz',
-    '13',
-    '14',
-    'FizzBuzz'
-]);
-expectToBeSameArray(fizzBuzz(1), ['1']);
+var test = require('ava');
+test('fizz-buzz', function(t) {
+    t.deepEqual(fizzBuzz(15), [
+        '1',
+        '2',
+        'Fizz',
+        '4',
+        'Buzz',
+        'Fizz',
+        '7',
+        '8',
+        'Fizz',
+        'Buzz',
+        '11',
+        'Fizz',
+        '13',
+        '14',
+        'FizzBuzz'
+    ]);
+    t.deepEqual(fizzBuzz(1), ['1']);
+});

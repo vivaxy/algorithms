@@ -20,5 +20,7 @@ var canWinNim = function(n) {
     return n % 4 !== 0;
 };
 
-var expect = require('../lib').expect;
-expect(canWinNim(4), false);
+var test = require('ava');
+test('nim-game', function(t) {
+    t.is(canWinNim(4), false);
+});

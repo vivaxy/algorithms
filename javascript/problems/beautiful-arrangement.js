@@ -84,7 +84,9 @@ var countArrangement = function(N) {
     return count;
 };
 
-var expect = require('../lib').expect;
-expect(countArrangement(2), 2);
-expect(countArrangement(3), 3);
-expect(countArrangement(4), 8);
+var test = require('ava');
+test('beautiful-arrangement', function(t) {
+    t.is(countArrangement(2), 2);
+    t.is(countArrangement(3), 3);
+    t.is(countArrangement(4), 8);
+});

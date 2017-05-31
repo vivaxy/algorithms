@@ -49,5 +49,7 @@ var findWords = function(words) {
     return words.filter(isWordsOnlyContainsLettersInOneRow);
 };
 
-var expectToBeSameArray = require('../lib').expectToBeSameArray;
-expectToBeSameArray(findWords(['Hello', 'Alaska', 'Dad', 'Peace']), ['Alaska', 'Dad']);
+var test = require('ava');
+test('keyboard-row', function(t) {
+    t.deepEqual(findWords(['Hello', 'Alaska', 'Dad', 'Peace']), ['Alaska', 'Dad']);
+});

@@ -41,10 +41,12 @@ var singleNumber2 = function(nums) {
     });
 };
 
-var expect = require('../lib').expect;
-expect(singleNumber([1]), 1);
-expect(singleNumber([1, 2, 2]), 1);
-expect(singleNumber([1, 2, 2, 1, 1]), 1);
-expect(singleNumber2([1]), 1);
-expect(singleNumber2([1, 2, 2]), 1);
-expect(singleNumber2([1, 2, 2, 1, 1]), 1);
+var test = require('ava');
+test('single-number', function(t) {
+    t.is(singleNumber([1]), 1);
+    t.is(singleNumber([1, 2, 2]), 1);
+    t.is(singleNumber([1, 2, 2, 1, 1]), 1);
+    t.is(singleNumber2([1]), 1);
+    t.is(singleNumber2([1, 2, 2]), 1);
+    t.is(singleNumber2([1, 2, 2, 1, 1]), 1);
+});

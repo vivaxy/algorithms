@@ -35,5 +35,7 @@ var findLUSlength = function(a, b) {
     return Math.max(a.length, b.length);
 };
 
-var expect = require('../lib').expect;
-expect(findLUSlength('aba', 'cdc'), 3);
+var test = require('ava');
+test('longest-uncommon-subsequence-i', function(t) {
+    t.is(findLUSlength('aba', 'cdc'), 3);
+});

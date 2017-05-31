@@ -33,5 +33,7 @@ var minMoves = function(nums) {
     }, 0);
 };
 
-var expect = require('../lib').expect;
-expect(minMoves([1, 2, 3]), 3);
+var test = require('ava');
+test('minimum-moves-to-equal-array-elements', function(t) {
+    t.is(minMoves([1, 2, 3]), 3);
+});

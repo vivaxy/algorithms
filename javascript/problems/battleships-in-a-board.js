@@ -82,18 +82,20 @@ var countBattleships2 = function(board) {
     return ships;
 };
 
-var expect = require('../lib').expect;
-expect(countBattleships(
-    [
-        ['X', '.', 'X'],
-        ['.', '.', 'X'],
-        ['.', '.', 'X']
-    ]
-), 2);
-expect(countBattleships2(
-    [
-        ['X', '.', 'X'],
-        ['.', '.', 'X'],
-        ['.', '.', 'X']
-    ]
-), 2);
+var test = require('ava');
+test('battleships-in-a-board', function(t) {
+    t.is(countBattleships(
+        [
+            ['X', '.', 'X'],
+            ['.', '.', 'X'],
+            ['.', '.', 'X']
+        ]
+    ), 2);
+    t.is(countBattleships2(
+        [
+            ['X', '.', 'X'],
+            ['.', '.', 'X'],
+            ['.', '.', 'X']
+        ]
+    ), 2);
+});

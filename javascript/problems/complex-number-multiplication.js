@@ -53,6 +53,8 @@ var complexNumberMultiply = function(a, b) {
     return convertToString(result);
 };
 
-var expect = require('../lib').expect;
-expect(complexNumberMultiply('1+1i', '1+1i'), '0+2i');
-expect(complexNumberMultiply('1+-1i', '1+-1i'), '0+-2i');
+var test = require('ava');
+test('complex-number-multiplication', function(t) {
+    t.is(complexNumberMultiply('1+1i', '1+1i'), '0+2i');
+    t.is(complexNumberMultiply('1+-1i', '1+-1i'), '0+-2i');
+});

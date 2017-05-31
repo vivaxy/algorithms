@@ -65,6 +65,8 @@ var matrixReshape = function(nums, r, c) {
     return output;
 };
 
-var expectToBeSameArray = require('../lib').expectToBeSameArray;
-expectToBeSameArray(matrixReshape([[1, 2], [3, 4]], 1, 4), [[1, 2, 3, 4]]);
-expectToBeSameArray(matrixReshape([[1, 2], [3, 4]], 2, 4), [[1, 2], [3, 4]]);
+var test = require('ava');
+test('reshape-the-matrix', function(t) {
+    t.deepEqual(matrixReshape([[1, 2], [3, 4]], 1, 4), [[1, 2, 3, 4]]);
+    t.deepEqual(matrixReshape([[1, 2], [3, 4]], 2, 4), [[1, 2], [3, 4]]);
+});

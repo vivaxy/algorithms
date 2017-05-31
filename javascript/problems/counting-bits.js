@@ -51,9 +51,11 @@ var countBits2 = function(num) {
     return results;
 };
 
-var expectToBeSameArray = require('../lib').expectToBeSameArray;
-expectToBeSameArray(countBits(5), [0, 1, 1, 2, 1, 2]);
-expectToBeSameArray(countBits(2), [0, 1, 1]);
+var test = require('ava');
+test('counting-bits', function(t) {
+    t.deepEqual(countBits(5), [0, 1, 1, 2, 1, 2]);
+    t.deepEqual(countBits(2), [0, 1, 1]);
 
-expectToBeSameArray(countBits2(5), [0, 1, 1, 2, 1, 2]);
-expectToBeSameArray(countBits2(2), [0, 1, 1]);
+    t.deepEqual(countBits2(5), [0, 1, 1, 2, 1, 2]);
+    t.deepEqual(countBits2(2), [0, 1, 1]);
+});

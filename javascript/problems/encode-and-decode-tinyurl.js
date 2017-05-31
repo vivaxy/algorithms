@@ -36,6 +36,8 @@ var decode = function(shortUrl) {
  * decode(encode(url));
  */
 
-var expect = require('../lib').expect;
-var url = 'https://leetcode.com/problems/design-tinyurl';
-expect(url, decode(encode(url)));
+var test = require('ava');
+test('encode-and-decode-tinyurl', function(t) {
+    var url = 'https://leetcode.com/problems/design-tinyurl';
+    t.is(url, decode(encode(url)));
+});

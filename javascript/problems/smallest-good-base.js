@@ -71,9 +71,11 @@ var smallestGoodBase2 = function(n) {
     }
 };
 
-var expect = require('../lib').expect;
-expect(smallestGoodBase2('13'), '3');
-expect(smallestGoodBase2('4681'), '8');
-expect(smallestGoodBase2('131407'), '362');
-expect(smallestGoodBase2('11573'), '11572');
-// expect(smallestGoodBase2('1000000000000000000'), '999999999999999999');
+var test = require('ava');
+test('smallest-good-base', function(t) {
+    t.is(smallestGoodBase2('13'), '3');
+    t.is(smallestGoodBase2('4681'), '8');
+    t.is(smallestGoodBase2('131407'), '362');
+    t.is(smallestGoodBase2('11573'), '11572');
+    // t.is(smallestGoodBase2('1000000000000000000'), '999999999999999999');
+});

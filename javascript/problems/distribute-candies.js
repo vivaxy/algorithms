@@ -43,8 +43,9 @@ var distributeCandies = function(candies) {
     return Math.min(deduplicatedCandies.length, candies.length / 2);
 };
 
-var expect = require('../lib').expect;
-
-expect(distributeCandies([1, 1, 2, 2, 3, 3]), 3);
-expect(distributeCandies([1, 1, 2, 3]), 2);
-expect(distributeCandies([0, 0, 14, 0, 10, 0, 0, 0]), 3);
+var test = require('ava');
+test('distribute-candies', function(t) {
+    t.is(distributeCandies([1, 1, 2, 2, 3, 3]), 3);
+    t.is(distributeCandies([1, 1, 2, 3]), 2);
+    t.is(distributeCandies([0, 0, 14, 0, 10, 0, 0, 0]), 3);
+});

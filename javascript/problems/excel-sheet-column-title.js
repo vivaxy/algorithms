@@ -38,7 +38,9 @@ var convertToTitle = function(n) {
     return results;
 };
 
-var expect = require('../lib').expect;
-expect(convertToTitle(1), 'A');
-expect(convertToTitle(26), 'Z');
-expect(convertToTitle(28), 'AB');
+var test = require('ava');
+test('excel-sheet-column-title', function(t) {
+    t.is(convertToTitle(1), 'A');
+    t.is(convertToTitle(26), 'Z');
+    t.is(convertToTitle(28), 'AB');
+});

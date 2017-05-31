@@ -74,36 +74,38 @@ var findBottomLeftValue = function(root) {
     return parseTreeNode(root, 0).val;
 };
 
-var expect = require('../lib').expect;
-var case1 = {
-    val: 2,
-    left: {
-        val: 1
-    },
-    right: {
-        val: 3
-    }
-};
-expect(findBottomLeftValue(case1), 1);
-var case2 = {
-    val: 1,
-    left: {
+var test = require('ava');
+test('find-bottom-left-tree-value', function(t) {
+    var case1 = {
         val: 2,
         left: {
-            val: 4
+            val: 1
+        },
+        right: {
+            val: 3
         }
-    },
-    right: {
-        val: 3,
+    };
+    t.is(findBottomLeftValue(case1), 1);
+    var case2 = {
+        val: 1,
         left: {
-            val: 5,
+            val: 2,
             left: {
-                val: 7
+                val: 4
             }
         },
         right: {
-            val: 6
+            val: 3,
+            left: {
+                val: 5,
+                left: {
+                    val: 7
+                }
+            },
+            right: {
+                val: 6
+            }
         }
-    }
-};
-expect(findBottomLeftValue(case2), 7);
+    };
+    t.is(findBottomLeftValue(case2), 7);
+});

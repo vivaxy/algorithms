@@ -83,6 +83,8 @@ var numberOfArithmeticSlices2 = function(A) {
     return sum;
 };
 
-var expect = require('../lib').expect;
-expect(numberOfArithmeticSlices([1, 2, 3, 4]), 3);
-expect(numberOfArithmeticSlices2([1, 2, 3, 4]), 3);
+var test = require('ava');
+test('arithmetic-slices', function(t) {
+    t.is(numberOfArithmeticSlices([1, 2, 3, 4]), 3);
+    t.is(numberOfArithmeticSlices2([1, 2, 3, 4]), 3);
+});

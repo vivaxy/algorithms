@@ -42,6 +42,7 @@ var findMaxConsecutiveOnes = function(nums) {
     return max;
 };
 
-var expect = require('../lib').expect;
-expect(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]), 3);
-
+var test = require('ava');
+test('max-consecutive-ones', function(t) {
+    t.is(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]), 3);
+});

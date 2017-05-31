@@ -44,6 +44,8 @@ var nextGreaterElement = function(findNums, nums) {
     });
 };
 
-var expectToBeSameArray = require('../lib').expectToBeSameArray;
-expectToBeSameArray(nextGreaterElement([4, 1, 2], [1, 3, 4, 2]), [-1, 3, -1]);
-expectToBeSameArray(nextGreaterElement([2, 4], [1, 2, 3, 4]), [3, -1]);
+var test = require('ava');
+test('next-greater-element-i', function(t) {
+    t.deepEqual(nextGreaterElement([4, 1, 2], [1, 3, 4, 2]), [-1, 3, -1]);
+    t.deepEqual(nextGreaterElement([2, 4], [1, 2, 3, 4]), [3, -1]);
+});
