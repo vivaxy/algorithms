@@ -20,6 +20,7 @@
  */
 
 /**
+ * @see https://leetcode.com/submissions/detail/104705120/
  * Definition for a binary tree node.
  * function TreeNode(val) {
  *     this.val = val;
@@ -36,7 +37,31 @@
  * @return {TreeNode}
  */
 var convertBST = function(root) {
-
+    var allNodes = [];
+    var traverse = function(node, callback) {
+        callback(node.val, node);
+        if (node.left) {
+            traverse(node.left, callback);
+        }
+        if (node.right) {
+            traverse(node.right, callback);
+        }
+    };
+    if (root) {
+        traverse(root, function(val) {
+            allNodes.push(val);
+        });
+    }
+    if (root) {
+        traverse(root, function(val, node) {
+            for (var i = 0; i < allNodes.length; i++) {
+                if (allNodes[i] > val) {
+                    node.val += allNodes[i];
+                }
+            }
+        });
+    }
+    return root;
 };
 
 var test = require('ava');
@@ -54,10 +79,10 @@ test('convert-bst-to-greater-tree', function(t) {
             right: null
         }
     };
-    t.deepEqual(input, {
-        val: 5,
+    t.deepEqual(convertBST(input), {
+        val: 18,
         left: {
-            val: 2,
+            val: 20,
             left: null,
             right: null
         },
