@@ -52,7 +52,7 @@ var countBits2 = function(num) {
 };
 
 var test = require('ava');
-test('counting-bits', function(t) {
+test('main', function(t) {
     t.deepEqual(countBits(5), [0, 1, 1, 2, 1, 2]);
     t.deepEqual(countBits(2), [0, 1, 1]);
 

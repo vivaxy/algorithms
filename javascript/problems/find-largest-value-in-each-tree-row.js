@@ -69,7 +69,7 @@ var largestValues = function(root) {
 };
 
 var test = require('ava');
-test('find-largest-value-in-each-tree-row', function(t) {
+test('main', function(t) {
     var treeNode = {
         val: 1,
         left: {

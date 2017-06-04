@@ -42,7 +42,7 @@ var singleNumber2 = function(nums) {
 };
 
 var test = require('ava');
-test('single-number', function(t) {
+test('main', function(t) {
     t.is(singleNumber([1]), 1);
     t.is(singleNumber([1, 2, 2]), 1);
     t.is(singleNumber([1, 2, 2, 1, 1]), 1);

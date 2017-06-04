@@ -34,7 +34,7 @@ var arrayPairSum = function(nums) {
 };
 
 var test = require('ava');
-test('array-partition-i', function(t) {
+test('main', function(t) {
     t.is(arrayPairSum([1, 4, 3, 2]), 4);
     t.is(arrayPairSum([11, 41, -9046, 2047, 1118, 8477, 8446, 279, 4925, 7380, -1719, 3855]), 6662);
 });

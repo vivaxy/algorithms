@@ -54,7 +54,7 @@ var complexNumberMultiply = function(a, b) {
 };
 
 var test = require('ava');
-test('complex-number-multiplication', function(t) {
+test('main', function(t) {
     t.is(complexNumberMultiply('1+1i', '1+1i'), '0+2i');
     t.is(complexNumberMultiply('1+-1i', '1+-1i'), '0+-2i');
 });

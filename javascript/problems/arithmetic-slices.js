@@ -84,7 +84,7 @@ var numberOfArithmeticSlices2 = function(A) {
 };
 
 var test = require('ava');
-test('arithmetic-slices', function(t) {
+test('main', function(t) {
     t.is(numberOfArithmeticSlices([1, 2, 3, 4]), 3);
     t.is(numberOfArithmeticSlices2([1, 2, 3, 4]), 3);
 });

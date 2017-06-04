@@ -47,7 +47,7 @@ var optimalDivision = function(nums) {
 };
 
 var test = require('ava');
-test('optimal-division', function(t) {
+test('main', function(t) {
     t.is(optimalDivision([1000, 100, 10, 2]), '1000/(100/10/2)');
     t.is(optimalDivision([1000]), '1000');
     t.is(optimalDivision([1000, 10]), '1000/10');

@@ -72,7 +72,7 @@ var smallestGoodBase2 = function(n) {
 };
 
 var test = require('ava');
-test('smallest-good-base', function(t) {
+test('main', function(t) {
     t.is(smallestGoodBase2('13'), '3');
     t.is(smallestGoodBase2('4681'), '8');
     t.is(smallestGoodBase2('131407'), '362');

@@ -78,7 +78,7 @@ var reconstructQueue2 = function(people) {
 };
 
 var test = require('ava');
-test('queue-reconstruction-by-height', function(t) {
+test('main', function(t) {
     t.deepEqual(
         reconstructQueue(
             [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]

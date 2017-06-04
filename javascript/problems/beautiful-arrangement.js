@@ -85,7 +85,7 @@ var countArrangement = function(N) {
 };
 
 var test = require('ava');
-test('beautiful-arrangement', function(t) {
+test('main', function(t) {
     t.is(countArrangement(2), 2);
     t.is(countArrangement(3), 3);
     t.is(countArrangement(4), 8);

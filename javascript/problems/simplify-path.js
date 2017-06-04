@@ -37,7 +37,7 @@ var simplifyPath = function(path) {
 };
 
 var test = require('ava');
-test('simplify-path', function(t) {
+test('main', function(t) {
     t.is(simplifyPath('/home/'), '/home');
     t.is(simplifyPath('/a/./b/../../c/'), '/c');
 });

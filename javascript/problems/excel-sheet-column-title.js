@@ -39,7 +39,7 @@ var convertToTitle = function(n) {
 };
 
 var test = require('ava');
-test('excel-sheet-column-title', function(t) {
+test('main', function(t) {
     t.is(convertToTitle(1), 'A');
     t.is(convertToTitle(26), 'Z');
     t.is(convertToTitle(28), 'AB');

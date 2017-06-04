@@ -98,7 +98,7 @@ var convertBST2 = function(root) {
 };
 
 var test = require('ava');
-test('convert-bst-to-greater-tree', function(t) {
+test('main', function(t) {
     var input1 = {
         val: 5,
         left: {

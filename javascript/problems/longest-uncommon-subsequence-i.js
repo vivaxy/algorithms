@@ -36,6 +36,6 @@ var findLUSlength = function(a, b) {
 };
 
 var test = require('ava');
-test('longest-uncommon-subsequence-i', function(t) {
+test('main', function(t) {
     t.is(findLUSlength('aba', 'cdc'), 3);
 });

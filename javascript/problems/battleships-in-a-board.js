@@ -83,7 +83,7 @@ var countBattleships2 = function(board) {
 };
 
 var test = require('ava');
-test('battleships-in-a-board', function(t) {
+test('main', function(t) {
     t.is(countBattleships(
         [
             ['X', '.', 'X'],

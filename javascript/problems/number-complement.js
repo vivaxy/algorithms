@@ -33,7 +33,7 @@ var findComplement = function(num) {
 };
 
 var test = require('ava');
-test('number-complement', function(t) {
+test('main', function(t) {
     t.is(findComplement(5), 2);
     t.is(findComplement(1), 0);
 });

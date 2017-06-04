@@ -78,7 +78,7 @@ var makesquare = function(nums) {
 };
 
 var test = require('ava');
-test('matchsticks-to-square', function(t) {
+test('main', function(t) {
     t.is(makesquare([1, 1, 2, 2, 2]), true);
     t.is(makesquare([3, 3, 3, 3, 4]), false);
     t.is(makesquare([5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3]), true);

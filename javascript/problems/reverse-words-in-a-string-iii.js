@@ -24,6 +24,6 @@ var reverseWords = function(s) {
 };
 
 var test = require('ava');
-test('reverse-words-in-a-string-iii', function(t) {
+test('main', function(t) {
     t.is(reverseWords('Let\'s take LeetCode contest'), 's\'teL ekat edoCteeL tsetnoc');
 });

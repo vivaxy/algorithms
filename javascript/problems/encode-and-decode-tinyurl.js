@@ -37,7 +37,7 @@ var decode = function(shortUrl) {
  */
 
 var test = require('ava');
-test('encode-and-decode-tinyurl', function(t) {
+test('main', function(t) {
     var url = 'https://leetcode.com/problems/design-tinyurl';
     t.is(url, decode(encode(url)));
 });

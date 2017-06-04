@@ -20,6 +20,6 @@ var reverseString = function(s) {
 };
 
 var test = require('ava');
-test('reverse-string', function(t) {
+test('main', function(t) {
     t.is(reverseString('hello'), 'olleh');
 });

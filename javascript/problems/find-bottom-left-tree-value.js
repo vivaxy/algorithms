@@ -75,7 +75,7 @@ var findBottomLeftValue = function(root) {
 };
 
 var test = require('ava');
-test('find-bottom-left-tree-value', function(t) {
+test('main', function(t) {
     var case1 = {
         val: 2,
         left: {

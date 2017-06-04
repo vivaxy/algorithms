@@ -45,7 +45,7 @@ var nextGreaterElement = function(findNums, nums) {
 };
 
 var test = require('ava');
-test('next-greater-element-i', function(t) {
+test('main', function(t) {
     t.deepEqual(nextGreaterElement([4, 1, 2], [1, 3, 4, 2]), [-1, 3, -1]);
     t.deepEqual(nextGreaterElement([2, 4], [1, 2, 3, 4]), [3, -1]);
 });

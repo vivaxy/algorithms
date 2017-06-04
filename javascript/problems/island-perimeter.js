@@ -49,7 +49,7 @@ var islandPerimeter = function(grid) {
 };
 
 var test = require('ava');
-test('island-perimeter', function(t) {
+test('main', function(t) {
     t.is(islandPerimeter(
         [
             [0, 1, 0, 0],

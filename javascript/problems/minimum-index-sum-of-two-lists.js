@@ -52,7 +52,7 @@ var findRestaurant = function(list1, list2) {
 };
 
 var test = require('ava');
-test('minimum-index-sum-of-two-lists', function(t) {
+test('main', function(t) {
     t.deepEqual(findRestaurant(
         ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'],
         ['Piatti', 'The Grill at Torrey Pines', 'Hungry Hunter Steakhouse', 'Shogun']

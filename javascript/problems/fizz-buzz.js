@@ -56,7 +56,7 @@ var fizzBuzz = function(n) {
 };
 
 var test = require('ava');
-test('fizz-buzz', function(t) {
+test('main', function(t) {
     t.deepEqual(fizzBuzz(15), [
         '1',
         '2',

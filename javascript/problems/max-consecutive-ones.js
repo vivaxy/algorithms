@@ -43,6 +43,6 @@ var findMaxConsecutiveOnes = function(nums) {
 };
 
 var test = require('ava');
-test('max-consecutive-ones', function(t) {
+test('main', function(t) {
     t.is(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]), 3);
 });

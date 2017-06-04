@@ -66,7 +66,7 @@ var matrixReshape = function(nums, r, c) {
 };
 
 var test = require('ava');
-test('reshape-the-matrix', function(t) {
+test('main', function(t) {
     t.deepEqual(matrixReshape([[1, 2], [3, 4]], 1, 4), [[1, 2, 3, 4]]);
     t.deepEqual(matrixReshape([[1, 2], [3, 4]], 2, 4), [[1, 2], [3, 4]]);
 });

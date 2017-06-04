@@ -21,6 +21,6 @@ var canWinNim = function(n) {
 };
 
 var test = require('ava');
-test('nim-game', function(t) {
+test('main', function(t) {
     t.is(canWinNim(4), false);
 });

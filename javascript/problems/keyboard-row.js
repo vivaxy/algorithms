@@ -50,6 +50,6 @@ var findWords = function(words) {
 };
 
 var test = require('ava');
-test('keyboard-row', function(t) {
+test('main', function(t) {
     t.deepEqual(findWords(['Hello', 'Alaska', 'Dad', 'Peace']), ['Alaska', 'Dad']);
 });

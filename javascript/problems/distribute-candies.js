@@ -44,7 +44,7 @@ var distributeCandies = function(candies) {
 };
 
 var test = require('ava');
-test('distribute-candies', function(t) {
+test('main', function(t) {
     t.is(distributeCandies([1, 1, 2, 2, 3, 3]), 3);
     t.is(distributeCandies([1, 1, 2, 3]), 2);
     t.is(distributeCandies([0, 0, 14, 0, 10, 0, 0, 0]), 3);

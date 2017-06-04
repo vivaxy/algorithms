@@ -69,7 +69,7 @@ var subsetsWithDup = function(nums) {
 };
 
 var test = require('ava');
-test('subsets-ii', function(t) {
+test('main', function(t) {
     t.deepEqual(subsetsWithDup([1, 2, 2]), [[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]);
     t.deepEqual(subsetsWithDup([1, 2, 3]), [[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]]);
 });

@@ -34,6 +34,6 @@ var minMoves = function(nums) {
 };
 
 var test = require('ava');
-test('minimum-moves-to-equal-array-elements', function(t) {
+test('main', function(t) {
     t.is(minMoves([1, 2, 3]), 3);
 });

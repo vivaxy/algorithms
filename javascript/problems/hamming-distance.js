@@ -67,7 +67,7 @@ var hammingDistance2 = function(x, y) {
 };
 
 var test = require('ava');
-test('hamming-distance', function(t) {
+test('main', function(t) {
     t.is(hammingDistance(1, 4), 2);
     t.is(hammingDistance2(1, 4), 2);
 });
