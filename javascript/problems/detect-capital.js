@@ -67,8 +67,40 @@ var detectCapitalUse = function(word) {
     return true;
 };
 
+/**
+ * @see https://leetcode.com/submissions/detail/104987352/
+ * @param {string} word
+ * @return {boolean}
+ */
+var detectCapitalUse2 = function(word) {
+    if (word.toUpperCase() === word) {
+        return true;
+    }
+    if (word.toLowerCase() === word) {
+        return true;
+    }
+
+    var firstChar = word[0];
+    if (firstChar !== firstChar.toUpperCase()) {
+        return false;
+    }
+    var index = 1;
+    var char;
+    while (char = word[index++]) {
+        if (char.toUpperCase() === char) {
+            return false;
+        }
+    }
+    return true;
+};
+
 var test = require('ava');
 test('main', function(t) {
     t.is(detectCapitalUse('USA'), true);
+    t.is(detectCapitalUse('test'), true);
     t.is(detectCapitalUse('FlaG'), false);
+
+    t.is(detectCapitalUse2('USA'), true);
+    t.is(detectCapitalUse2('test'), true);
+    t.is(detectCapitalUse2('FlaG'), false);
 });
