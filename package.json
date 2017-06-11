@@ -9,7 +9,7 @@
     "files": [
       "javascript/problems/*.js"
     ],
-    "concurrency": 1,
+    "concurrency": 500,
     "verbose": true
   }
 }
