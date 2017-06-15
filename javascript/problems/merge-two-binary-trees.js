@@ -33,35 +33,39 @@
  *     this.left = this.right = null;
  * }
  */
+var TreeNode = function(val) {
+    this.val = val;
+    this.left = this.right = null;
+};
 /**
+ * @see https://leetcode.com/submissions/detail/106096147/
+ *
  * @param {TreeNode} t1
  * @param {TreeNode} t2
  * @return {TreeNode}
  */
 var mergeTrees = function(t1, t2) {
     var traverse = function(node1, node2) {
+        var treeNode = null;
         if (!node1) {
             if (!node2) {
-                return null;
+                return treeNode;
             }
-            return {
-                val: node2.val,
-                left: traverse(null, node2.left),
-                right: traverse(null, node2.right)
-            };
+            treeNode = new TreeNode(node2.val);
+            treeNode.left = traverse(null, node2.left);
+            treeNode.right = traverse(null, node2.right);
+            return treeNode;
         }
         if (!node2) {
-            return {
-                val: node1.val,
-                left: traverse(node1.left, null),
-                right: traverse(node1.right, null)
-            };
+            treeNode = new TreeNode(node1.val);
+            treeNode.left = traverse(node1.left, null);
+            treeNode.right = traverse(node1.right, null);
+            return treeNode;
         }
-        return {
-            val: node1.val + node2.val,
-            left: traverse(node1.left, node2.left),
-            right: traverse(node1.right, node2.right)
-        };
+        treeNode = new TreeNode(node1.val + node2.val);
+        treeNode.left = traverse(node1.left, node2.left);
+        treeNode.right = traverse(node1.right, node2.right);
+        return treeNode;
     };
     return traverse(t1, t2);
 };
@@ -106,30 +110,11 @@ test('main', function(t) {
             }
         }
     };
-    var treeNode1 = {
-        val: 3,
-        left: {
-            val: 4,
-            left: {
-                val: 5,
-                left: null,
-                right: null
-            },
-            right: {
-                val: 4,
-                left: null,
-                right: null
-            }
-        },
-        right: {
-            val: 5,
-            left: null,
-            right: {
-                val: 7,
-                left: null,
-                right: null
-            }
-        }
-    };
+    var treeNode1 = new TreeNode(3);
+    treeNode1.left = new TreeNode(4);
+    treeNode1.right = new TreeNode(5);
+    treeNode1.left.left = new TreeNode(5);
+    treeNode1.left.right = new TreeNode(4);
+    treeNode1.right.right = new TreeNode(7);
     t.deepEqual(mergeTrees(treeNode11, treeNode12), treeNode1);
 });
