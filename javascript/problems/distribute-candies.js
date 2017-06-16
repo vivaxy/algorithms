@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-07 13:11:33
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/distribute-candies/
 
  Given an integer array with even length, where different numbers in this array represent different kinds of candies. Each number means one candy of the corresponding kind. You need to distribute these candies equally in number to brother and sister. Return the maximum number of kinds of candies the sister could gain.
@@ -26,6 +27,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/102282640/
+ *
  * @param {number[]} candies
  * @return {number}
  */

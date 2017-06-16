@@ -1,7 +1,9 @@
 /**
  * @since 2017-05-30 10:29:27
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/find-largest-value-in-each-tree-row/
+
  You need to find the largest value in each row of a binary tree.
 
  Example:
@@ -18,18 +20,18 @@
  */
 
 /**
- * @see https://leetcode.com/submissions/detail/104394005/
  * Definition for a binary tree node.
  * function TreeNode(val) {
  *     this.val = val;
  *     this.left = this.right = null;
  * }
- */
-/**
  * @typedef {Object} TreeNode
  * @property {?TreeNode} left
  * @property {?TreeNode} right
  * @property {number} val
+ */
+/**
+ * @see https://leetcode.com/submissions/detail/104394005/
  *
  * @param {TreeNode} root
  * @return {number[]}

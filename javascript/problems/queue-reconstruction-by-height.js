@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-15 10:00:05
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/queue-reconstruction-by-height/
 
  Suppose you have a random list of people standing in a queue. Each person is described by a pair of integers (h, k), where h is the height of the person and k is the number of people in front of this person who have a height greater than or equal to h. Write an algorithm to reconstruct the queue.
@@ -20,6 +21,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/103145734/
+ *
  * @param {number[][]} people
  * @return {number[][]}
  */
@@ -56,7 +58,9 @@ var reconstructQueue = function(people) {
 /**
  * 1. 正序，其中高度相同的按照 person[1] 倒序
  * 2. 从最后一个开始把人放进新的队列中，放到第 person[1] 位
+ *
  * @see https://leetcode.com/submissions/detail/103266407/
+ *
  * @param {number[][]} people
  * @return {number[][]}
  */

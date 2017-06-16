@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-03 10:52:50
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/battleships-in-a-board/
 
  Given an 2D board, count how many battleships are in it. The battleships are represented with 'X's, empty slots are represented with '.'s. You may assume the following rules:
@@ -25,6 +26,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/101828331/
+ *
  * @param {String[][]} board
  * @return {number}
  */
@@ -66,6 +68,7 @@ var countBattleships = function(board) {
 
 /**
  * @see https://leetcode.com/submissions/detail/101830777/
+ *
  * @param {String[][]} board
  * @return {number}
  */

@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-10 09:37:23
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/third-maximum-number/
 
  Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).
@@ -29,6 +30,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/105539524/
+ *
  * @param {number[]} nums
  * @return {number}
  */

@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-10 16:13:39
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/word-pattern/
 
  Given a pattern and a string str, find if str follows the same pattern.

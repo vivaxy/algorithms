@@ -1,6 +1,8 @@
 /**
  * @since 2017-06-07 10:22:44
  * @author vivaxy
+ *
+ * @see https://leetcode.com/problems/construct-string-from-binary-tree/
 
  You need to construct a string consists of parenthesis and integers from a binary tree with the preorder traversing way.
 

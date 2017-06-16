@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-09 21:26:44
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/first-bad-version/
 
  You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
@@ -23,6 +24,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/105492090/
+ *
  * @param {function} isBadVersion()
  * @return {function}
  */

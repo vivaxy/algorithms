@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-31 10:42:50
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/convert-bst-to-greater-tree/
 
  Given a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus sum of all keys greater than the original key in BST.
@@ -20,18 +21,20 @@
  */
 
 /**
- * @see https://leetcode.com/submissions/detail/104705120/
  * Definition for a binary tree node.
  * function TreeNode(val) {
  *     this.val = val;
  *     this.left = this.right = null;
  * }
- */
-/**
+ *
  * @typedef {Object} TreeNode
  * @property {number} val
  * @property {?TreeNode} left
  * @property {?TreeNode} right
+ */
+
+/**
+ * @see https://leetcode.com/submissions/detail/104705120/
  *
  * @param {TreeNode} root
  * @return {TreeNode}
@@ -66,18 +69,6 @@ var convertBST1 = function(root) {
 
 /**
  * @see https://leetcode.com/submissions/detail/104780858/
- * 深度优先，右子树优先，加上右侧的值
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
- */
-/**
- * @typedef {Object} TreeNode
- * @property {number} val
- * @property {?TreeNode} left
- * @property {?TreeNode} right
  *
  * @param {TreeNode} root
  * @return {TreeNode}

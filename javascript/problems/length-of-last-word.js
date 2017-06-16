@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-10 14:50:08
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/length-of-last-word/
 
  Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.
@@ -17,6 +18,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/105559400/
+ *
  * @param {string} s
  * @return {number}
  */

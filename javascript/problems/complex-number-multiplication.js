@@ -1,6 +1,7 @@
 /**
  * @since 2017-04-29 09:38:15
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/complex-number-multiplication/
 
  Given two strings representing two complex numbers.
@@ -24,6 +25,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/101472153/
+ *
  * @param {string} a
  * @param {string} b
  * @return {string}

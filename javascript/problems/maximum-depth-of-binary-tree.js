@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-09 11:09:15
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
  Given a binary tree, find its maximum depth.
@@ -15,14 +16,13 @@
  *     this.val = val;
  *     this.left = this.right = null;
  * }
- */
-/**
- * @see https://leetcode.com/submissions/detail/105447489/
- *
  * @typedef {Object} TreeNode
  * @property {number} val
  * @property {?TreeNode} left
  * @property {?TreeNode} right
+ */
+/**
+ * @see https://leetcode.com/submissions/detail/105447489/
  *
  * @param {TreeNode} root
  * @return {number}

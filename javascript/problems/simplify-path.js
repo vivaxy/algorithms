@@ -1,6 +1,7 @@
 /**
  * @since 2017-03-20 08:53:17
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/simplify-path/
 
  Given an absolute path for a file (Unix-style), simplify it.
@@ -13,6 +14,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/97327909/
+ *
  * @param {string} path
  * @return {string}
  */

@@ -1,6 +1,7 @@
 /**
  * @since 2017-03-22 14:26:29
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/maximum-subarray/
 
  Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
@@ -13,7 +14,9 @@
 /**
  * 从头开始，记录到当前位置的所有值的和，如果和小于0，说明这段可以舍弃，不包含这段的结果会更大。
  * 记录下这个最大值作为一个中间结果，比较每一段的和，取最大的
+ *
  * @see https://leetcode.com/submissions/detail/97926397/
+ *
  * @param {number[]} nums
  * @return {number}
  */

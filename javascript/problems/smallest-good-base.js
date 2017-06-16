@@ -1,6 +1,7 @@
 /**
  * @since 2017-04-02 09:52:31
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/smallest-good-base/
 
  For an integer n, we call k>=2 a good base of n, if all digits of n base k are 1.
@@ -27,6 +28,7 @@
 
 /**
  * 寻找进制
+ *
  * @param {string} n
  * @return {string}
  */
@@ -55,6 +57,7 @@ var smallestGoodBase = function(n) {
  *      => 等比数列求和公式：n = (1 - k^a) / (1 - k)
  *          => a = log(1 - n * (1 - k)) / log(k)，求最小的 a
  *              => 浮点精度丢失问题
+ *
  * @param {string} n
  * @return {string}
  */

@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-19 10:04:51
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/arithmetic-slices/
 
  A sequence of number is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
@@ -32,9 +33,11 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/103517773/
+ *
  * 1. [1, 2, 3, 4] diff => [1, 1, 1]
  * 2. find sibling same items, get length
  * 3. (n - 1) * (n - 2) / 2, where n is the array length, as previous step's result + 1
+ *
  * @param {number[]} A
  * @return {number}
  */
@@ -66,6 +69,7 @@ var numberOfArithmeticSlices = function(A) {
 
 /**
  * @see https://leetcode.com/submissions/detail/103518125/
+ *
  * @param {number[]} A
  * @return {number}
  */

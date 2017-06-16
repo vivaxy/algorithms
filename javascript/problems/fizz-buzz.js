@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-08 09:53:00
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/fizz-buzz/
 
  Write a program that outputs the string representation of numbers from 1 to n.
@@ -34,6 +35,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/102281750/
+ *
  * @param {number} n
  * @return {string[]}
  */

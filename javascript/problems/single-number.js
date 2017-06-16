@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-25 10:44:41
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/single-number/
 
  Given an array of integers, every element appears twice except for one. Find that single one.
@@ -12,6 +13,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/103949051/
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -32,6 +34,7 @@ var singleNumber = function(nums) {
 
 /**
  * @see https://leetcode.com/submissions/detail/103949647/
+ *
  * @param {number[]} nums
  * @return {number}
  */

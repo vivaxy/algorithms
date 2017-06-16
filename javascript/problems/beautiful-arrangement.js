@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-22 09:38:42
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/beautiful-arrangement/
 
  Suppose you have N integers from 1 to N. We define a beautiful arrangement as an array that is constructed by these N numbers successfully if one of the following is true for the ith position (1 ≤ i ≤ N) in this array:
@@ -32,6 +33,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/103732980/
+ *
  *     1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18  .  .  .
  *  1  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x  x
  *  2  x  x     x     x     x     x     x     x     x     x
@@ -54,6 +56,7 @@
  *  .
  *  .
  *  .
+ *
  * @param {number} N
  * @return {number}
  */

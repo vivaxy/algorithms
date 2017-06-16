@@ -1,6 +1,7 @@
 /**
  * @since 2017-03-09 12:24
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/hamming-distance/
 
  The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
@@ -27,6 +28,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/96029999/
+ *
  * @param {number} x
  * @param {number} y
  * @return {number}
@@ -50,6 +52,7 @@ var hammingDistance = function(x, y) {
 
 /**
  * @see https://leetcode.com/submissions/detail/96167955/
+ *
  * @param {number} x
  * @param {number} y
  * @return {number}

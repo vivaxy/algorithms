@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-10 09:58:13
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/min-stack/
 
  Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
@@ -23,6 +24,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/105540317/
+ *
  * initialize your data structure here.
  */
 var MinStack = function() {

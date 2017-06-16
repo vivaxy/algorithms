@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-13 09:48:05
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/optimal-division/
 
  Given a list of positive integers, the adjacent integers will perform the float division. For example, [2,3,4] -> 2 / 3 / 4.
@@ -31,7 +32,9 @@
 /**
  * nums[0] / nums[1] * nums[2] * ...
  * nums[0] / (nums[1] / nums[2] / ...)
+ *
  * @see https://leetcode.com/submissions/detail/102770045/
+ *
  * @param {number[]} nums
  * @return {string}
  */

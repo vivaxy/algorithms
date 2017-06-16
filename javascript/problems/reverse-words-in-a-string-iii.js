@@ -1,6 +1,7 @@
 /**
  * @since 2017-04-30 10:07:40
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/reverse-words-in-a-string-iii/
 
  Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
@@ -14,6 +15,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/101549082/
+ *
  * @param {string} s
  * @return {string}
  */

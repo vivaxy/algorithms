@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-10 13:46:27
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/reverse-bits/
 
  Reverse bits of a given 32 bits unsigned integer.
@@ -16,6 +17,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/105555113/
+ *
  * @param {number} n - a positive integer
  * @return {number} - a positive integer
  */

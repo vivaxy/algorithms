@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-09 18:50:52
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/reverse-integer/
 
  Reverse digits of an integer.
@@ -17,6 +18,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/105485452/
+ *
  * @param {number} x
  * @return {number}
  */
@@ -38,6 +40,7 @@ var reverse = function(x) {
 
 /**
  * @see https://leetcode.com/submissions/detail/105485673/
+ *
  * @param {number} x
  * @return {number}
  */

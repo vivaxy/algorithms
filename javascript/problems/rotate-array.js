@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-09 20:04:40
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/rotate-array/
 
  Rotate an array of n elements to the right by k steps.
@@ -21,6 +22,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/105487953/
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {void} Do not return anything, modify nums in-place instead.
@@ -34,6 +36,7 @@ var rotate = function(nums, k) {
 
 /**
  * @see https://leetcode.com/submissions/detail/105488060/
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {void} Do not return anything, modify nums in-place instead.

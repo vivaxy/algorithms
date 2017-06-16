@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-02 10:11:10
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/number-complement/
 
  Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.
@@ -21,6 +22,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/101724190/
+ *
  * @param {number} num
  * @return {number}
  */

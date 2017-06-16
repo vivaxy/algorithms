@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-04 09:31:07
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/detect-capital/
 
  Given a word, you need to judge whether the usage of capitals in it is right or not.
@@ -23,6 +24,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/104877607/
+ *
  * @param {string} word
  * @return {boolean}
  */
@@ -69,6 +71,7 @@ var detectCapitalUse = function(word) {
 
 /**
  * @see https://leetcode.com/submissions/detail/104987352/
+ *
  * @param {string} word
  * @return {boolean}
  */

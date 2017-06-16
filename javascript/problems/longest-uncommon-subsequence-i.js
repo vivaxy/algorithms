@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-26 10:36:26
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/longest-uncommon-subsequence-i/
 
  Given a group of two strings, you need to find the longest uncommon subsequence of this group of two strings. The longest uncommon subsequence is defined as the longest subsequence of one of these strings and this subsequence should not be any subsequence of the other strings.
@@ -24,6 +25,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/104036405/
+ *
  * @param {string} a
  * @param {string} b
  * @return {number}

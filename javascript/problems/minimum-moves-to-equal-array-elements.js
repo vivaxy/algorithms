@@ -1,6 +1,7 @@
 /**
  * @since 2017-03-21 12:12:17
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/minimum-moves-to-equal-array-elements/
 
  Given a non-empty integer array of size n, find the minimum number of moves required to make all array elements equal, where a move is incrementing n - 1 elements by 1.
@@ -22,7 +23,9 @@
 
 /**
  * 相当于：每次把其中一个值 -1，多少次后能让所有数字都一致？
+ *
  * @see https://leetcode.com/submissions/detail/97473501/
+ *
  * @param {number[]} nums
  * @return {number}
  */

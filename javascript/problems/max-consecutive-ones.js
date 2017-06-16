@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-24 10:27:55
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/max-consecutive-ones/
 
  Given a binary array, find the maximum number of consecutive 1s in this array.
@@ -19,6 +20,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/103831503/
+ *
  * @param {number[]} nums
  * @return {number}
  */

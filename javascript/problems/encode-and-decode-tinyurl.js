@@ -1,6 +1,7 @@
 /**
  * @since 2017-04-28 13:40:04
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/encode-and-decode-tinyurl
 
  TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
@@ -35,7 +36,6 @@ var decode = function(shortUrl) {
  * Your functions will be called as such:
  * decode(encode(url));
  */
-
 var test = require('ava');
 test('main', function(t) {
     var url = 'https://leetcode.com/problems/design-tinyurl';

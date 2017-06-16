@@ -1,6 +1,7 @@
 /**
  * @since 2017-06-10 10:44:22
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/range-sum-query-immutable/
 
  Given an integer array nums, find the sum of the elements between indices i and j (i ≤ j), inclusive.
@@ -65,6 +66,7 @@ NumArray.prototype.sumRange = function(i, j) {
 
 /**
  * @see https://leetcode.com/submissions/detail/105545003/
+ *
  * @param {number[]} nums
  */
 var NumArray2 = function(nums) {

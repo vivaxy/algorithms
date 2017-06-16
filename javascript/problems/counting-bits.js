@@ -1,6 +1,7 @@
 /**
  * @since 2017-05-04 10:29:58
  * @author vivaxy
+ *
  * @see https://leetcode.com/problems/counting-bits/
 
  Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1's in their binary representation and return them as an array.
@@ -18,6 +19,7 @@
 
 /**
  * @see https://leetcode.com/submissions/detail/101927861/
+ *
  * @param {number} num
  * @return {number[]}
  */
@@ -36,7 +38,9 @@ var countBits = function(num) {
 
 /**
  * @see https://leetcode.com/submissions/detail/102035894/
+ *
  * f(i) = f((i - i % 2) / 2) + i % 2
+ *
  * @param {number} num
  * @return {number[]}
  */
