@@ -1,0 +1,23 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vivaxy/algorithms.git"
+  },
+  "license": "MIT",
+  "description": "leetcode javascrpt solutions",
+  "dependencies": {
+    "ava": "^0.19.1"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "ava": {
+    "files": [
+      "problems/*.js"
+    ],
+    "concurrency": 500,
+    "verbose": true
+  }
+}
