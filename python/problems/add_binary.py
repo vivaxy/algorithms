@@ -3,6 +3,8 @@ https://leetcode.com/problems/add-binary/
 
 https://leetcode.com/submissions/detail/106524947/
 """
+
+
 class Solution(object):
     def addBinary(self, a, b):
         """
@@ -34,9 +36,12 @@ class Solution(object):
 
 
 import unittest
+
+
 class Test(unittest.TestCase):
     def test(self):
         self.assertEqual(Solution().addBinary('11', '1'), '100')
+
 
 if __name__ == '__main__':
     unittest.main()

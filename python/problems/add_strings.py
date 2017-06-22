@@ -4,6 +4,7 @@ https://leetcode.com/problems/add-strings/
 https://leetcode.com/submissions/detail/106766561/
 """
 
+
 class Solution(object):
     def addStrings(self, num1, num2):
         """
@@ -26,14 +27,19 @@ class Solution(object):
             result = str(remaining) + result
         return result
 
+
 import unittest
+
+
 class Test(unittest.TestCase):
     def test(self):
         solution = Solution()
         self.assertEqual(solution.addStrings('1', '2'), '3')
         self.assertEqual(solution.addStrings('100', '100'), '200')
-        self.assertEqual(solution.addStrings('9333852702227987', '85731737104263'), '9419584439332250')
+        self.assertEqual(solution.addStrings(
+            '9333852702227987', '85731737104263'), '9419584439332250')
         self.assertEqual(solution.addStrings('1', '9'), '10')
+
 
 if __name__ == '__main__':
     unittest.main()
