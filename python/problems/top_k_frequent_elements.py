@@ -57,7 +57,7 @@ class Test(unittest.TestCase):
         solution = Solution()
         self.assertEqual(solution.topKFrequent([1, 1, 1, 2, 2, 3], 2), [1, 2])
         self.assertEqual(solution.topKFrequent(
-            [4, 1, -1, 2, -1, 2, 3], 2), [2, -1])
+            [4, 1, -1, 2, -1, 2, 3], 2), [-1, 2])
 
 
 if __name__ == '__main__':
