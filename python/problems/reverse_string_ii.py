@@ -16,7 +16,7 @@ class Solution(object):
         result = ''
         while index < len(s):
             if index % (2 * k) < k:
-                # reverseÎ
+                # reverse
                 array = list(s[index:index + k])
                 array.reverse()
                 result += ''.join(array)
