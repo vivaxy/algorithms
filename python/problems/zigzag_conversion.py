@@ -36,7 +36,6 @@ class Solution(object):
         return result
 
 
-
 import unittest
 
 
