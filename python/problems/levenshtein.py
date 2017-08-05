@@ -22,9 +22,9 @@ class Levenshtein(object):
         for i in range(len(stringB)):
             row = [i + 1]
             for j in range(len(stringA)):
-                value = min(matrix[i - 1][j] + 1, row[j - 1] + 1)
-                diff = 0 if stringB[i] == stringA[j] else 1
-                value = min(value, matrix[i - 1][j - 1] + diff)
+                value = min(matrix[i][j + 1] + 1, row[j] + 1)
+                cost = 0 if stringB[i] == stringA[j] else 1
+                value = min(value, matrix[i][j] + cost)
                 row.append(value)
             matrix.append(row)
         self.matrix = matrix
@@ -46,6 +46,8 @@ class Test(unittest.TestCase):
         self.assertEqual(levenshtein.getDistance(), 5)
         levenshtein = Levenshtein('abcdef', '')
         self.assertEqual(levenshtein.getDistance(), 6)
+        levenshtein = Levenshtein('acat', 'gate')
+        self.assertEqual(levenshtein.getDistance(), 3)
 
 
 if __name__ == '__main__':
