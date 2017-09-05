@@ -13,7 +13,6 @@ class Solution(object):
         """
         sortedNums = sorted(nums)
         for prev, next in zip(sortedNums, sortedNums[1:]):
-            print(prev, next)
             if prev == next:
                 return prev
 
