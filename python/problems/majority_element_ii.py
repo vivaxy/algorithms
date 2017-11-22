@@ -29,7 +29,7 @@ import unittest
 class Test(unittest.TestCase):
     def test(self):
         solution = Solution()
-        self.assertEqual(solution.majorityElement([1, 1, 1]), 1)
+        self.assertEqual(solution.majorityElement([1, 1, 1]), [1])
 
 
 if __name__ == '__main__':
