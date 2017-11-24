@@ -4,6 +4,7 @@ https://leetcode.com/problems/baseball-game/description/
 https://leetcode.com/submissions/detail/129471355/
 """
 
+
 class Solution:
     def calPoints(self, ops):
         """
@@ -24,13 +25,14 @@ class Solution:
         return sum(scores)
 
 
-
 import unittest
+
 
 class Test(unittest.TestCase):
     def test(self):
         solution = Solution()
         self.assertEqual(solution.calPoints(['5', '2', 'C', 'D', '+']), 30)
+
 
 if __name__ == '__main__':
     unittest.main()
