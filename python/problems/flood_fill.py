@@ -18,7 +18,7 @@ class Solution:
         totalColCount = len(image[0])
         initialValue = image[sr][sc]
         toSearchPixels = [{'row': sr, 'col': sc}]
-        toUpdatePixels = [{'row': sr, 'col': sc}]
+        toUpdatePixels = []
         while len(toSearchPixels):
             centerPixel = toSearchPixels.pop()
             # up
