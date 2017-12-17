@@ -1,17 +1,10 @@
 """
 https://leetcode.com/problems/print-binary-tree/description/
 
-
+https://leetcode.com/submissions/detail/132220547/
 """
 
-# from common.tree_node import TreeNode
-
-
-class TreeNode(object):
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+from common.tree_node import TreeNode
 
 
 class Solution:
@@ -20,45 +13,46 @@ class Solution:
         :type root: TreeNode
         :rtype: List[List[str]]
         """
-        if not root:
-            return [['']]
-        if not root.left and not root.right:
-            return [[str(root.val)]]
-        left = self.printTree(root.left)
-        right = self.printTree(root.right)
-        total = []
-
-        # 补充缺少的行
-        rowCount = max(len(left), len(right))
-        if len(left) < rowCount:
-            for rowIndex in range(rowCount - len(left)):
-                left.append([''])
-        if len(right) < rowCount:
-            for rowIndex in range(rowCount - len(right)):
-                right.append([''])
-        for rowIndex in range(rowCount):
-            leftPart = left[rowIndex]
-            rightPart = right[rowIndex]
-            # 补充缺少的列
-            colCount = max(len(leftPart), len(rightPart))
-            if len(left) < colCount:
-                toMend = int((colCount - len(leftPart)) / 2)
-                while toMend > 0:
-                    leftPart = [''] + leftPart + ['']
-                    toMend -= 1
-            if len(rightPart) < colCount:
-                toMend = int((colCount - len(rightPart)) / 2)
-                while toMend > 0:
-                    rightPart = [''] + rightPart + ['']
-                    toMend -= 1
-            total.append(leftPart + [''] + rightPart)
-        firstRow = []
-        for colIndex in range(len(total[0])):
-            if int((len(total[0]) - 1) / 2) == colIndex:
-                firstRow.append(str(root.val))
-            else:
-                firstRow.append('')
-        return [firstRow] + total
+        """
+        1. 广度优先遍历树节点
+        2. 从最后一层开始拼树组
+        """
+        totalBfsList = []
+        previousBfsList = [root]
+        nextBfsList = []
+        nextAllNone = False
+        while not nextAllNone:
+            previousBfsValList = []
+            for node in previousBfsList:
+                if not node:
+                    nextBfsList.append(None)
+                    nextBfsList.append(None)
+                    previousBfsValList.append(None)
+                else:
+                    nextBfsList.append(node.left)
+                    nextBfsList.append(node.right)
+                    previousBfsValList.append(node.val)
+            totalBfsList.append(previousBfsValList)
+            previousBfsList = []
+            nextAllNone = True
+            for node in nextBfsList:
+                if node:
+                    nextAllNone = False
+                previousBfsList.append(node)
+            nextBfsList = []
+        gap = 0
+        result = []
+        while len(totalBfsList):
+            currentList = totalBfsList.pop()
+            row = []
+            for val in currentList:
+                if val == None:
+                    val = ''
+                row = row + [''] * gap + [str(val)] + [''] * gap + ['']
+            row.pop()
+            gap = gap * 2 + 1
+            result = [row] + result
+        return result
 
 
 import unittest
