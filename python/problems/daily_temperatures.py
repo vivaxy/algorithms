@@ -1,7 +1,7 @@
 """
 https://leetcode.com/problems/daily-temperatures/description/
 
-
+https://leetcode.com/submissions/detail/137437366/
 """
 
 
@@ -12,20 +12,14 @@ class Solution:
         :rtype: List[int]
         """
         temperaturesLength = len(temperatures)
-        result = []
-        for index in range(temperaturesLength):
-            tem = temperatures[index]
-            i = index + 1
-            found = False
-            while i < temperaturesLength:
-                if temperatures[i] > tem:
-                    found = True
-                    break
-                i += 1
-            if found:
-                result.append(i - index)
-            else:
-                result.append(0)
+        result = [0] * temperaturesLength
+        stack = [] # 从大到小
+        for index in range(temperaturesLength - 1, -1, -1):
+            while len(stack) and temperatures[stack[-1]] <= temperatures[index]:
+                stack.pop()
+            if len(stack):
+                result[index] = stack[-1] - index
+            stack.append(index)
         return result
 
 
