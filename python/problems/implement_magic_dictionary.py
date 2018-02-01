@@ -11,6 +11,7 @@ class MagicDictionary:
         """
         Initialize your data structure here.
         """
+        self.s = set()
 
 
     def buildDict(self, dict):
@@ -19,6 +20,12 @@ class MagicDictionary:
         :type dict: List[str]
         :rtype: void
         """
+        alphabeta = 'abcdefghijklmnopqrstuvwxyz'
+        for word in dict:
+            for index in range(len(word)):
+                for letter in alphabeta:
+                    if letter != word[index]:
+                        self.s.add(word[:index] + letter + word[index + 1:])
 
     def search(self, word):
         """
@@ -26,6 +33,7 @@ class MagicDictionary:
         :type word: str
         :rtype: bool
         """
+        return word in self.s
 
 
 # Your MagicDictionary object will be instantiated and called as such:
