@@ -1,15 +1,16 @@
 """
 https://leetcode.com/problems/my-calendar-iii/description/
 
-
+https://leetcode.com/submissions/detail/139013850/
 """
+
+import collections
 
 
 class MyCalendarThree:
 
     def __init__(self):
-        self.timeSpan = []
-        self.k = 1
+        self.delta = collections.Counter()
 
     def book(self, start, end):
         """
@@ -17,15 +18,15 @@ class MyCalendarThree:
         :type end: int
         :rtype: int
         """
-        for i in range(len(self.timeSpan), start):
-            self.timeSpan.append(0)
-        for i in range(start, min(end, len(self.timeSpan))):
-            self.timeSpan[i] += 1
-            if self.k < self.timeSpan[i]:
-                self.k = self.timeSpan[i]
-        for i in range(len(self.timeSpan), end):
-            self.timeSpan.append(1)
-        return self.k
+        self.delta[start] += 1
+        self.delta[end] -= 1
+        active = 0
+        ans = 0
+        for x in sorted(self.delta):
+            active += self.delta[x]
+            if active > ans:
+                ans = active
+        return ans
 
 
 # Your MyCalendarThree object will be instantiated and called as such:
