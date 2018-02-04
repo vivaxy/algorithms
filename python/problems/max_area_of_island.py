@@ -29,7 +29,7 @@ class Solution:
                 return 0
             if grid[rowIndex][colIndex] == 0:
                 return 0
-            seen.add(( rowIndex, colIndex ))
+            seen.add((rowIndex, colIndex))
             return 1 + getArea(rowIndex, colIndex + 1) + getArea(rowIndex, colIndex - 1) + getArea(rowIndex + 1, colIndex) + getArea(rowIndex - 1, colIndex)
 
         for rowIndex in range(rowCount):
