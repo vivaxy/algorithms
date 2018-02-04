@@ -1,7 +1,7 @@
 """
 https://leetcode.com/problems/max-area-of-island/description/
 
-
+https://leetcode.com/submissions/detail/139333744/
 """
 
 
@@ -12,40 +12,31 @@ class Solution:
         :rtype: int
         """
         maxArea = 0
-        gridRowCount = len(grid)
-        for row in range(gridRowCount):
-            gridColCount = len(grid[row])
-            for col in range(gridColCount):
-                value = grid[row][col]
-                if value == 1:
-                    currentArea = 0
-                    traversed = []
-                    candidates = []
-                    candidates.append({'row': row, 'col': col})
-                    while len(candidates) > 0:
-                        curr = candidates.pop(0)
-                        if curr in traversed:
-                            continue
-                        traversed.append(curr)
-                        currentArea += 1
-                        # up
-                        if curr['row'] - 1 >= 0 and grid[curr['row'] - 1][curr['col']] == 1:
-                            candidates.append(
-                                {'row': curr['row'] - 1, 'col': curr['col']})
-                        # down
-                        if curr['row'] + 1 < gridRowCount and grid[curr['row'] + 1][curr['col']] == 1:
-                            candidates.append(
-                                {'row': curr['row'] + 1, 'col': curr['col']})
-                        # left
-                        if curr['col'] - 1 >= 0 and grid[curr['row']][curr['col'] - 1] == 1:
-                            candidates.append(
-                                {'row': curr['row'], 'col': curr['col'] - 1})
-                        # right
-                        if curr['col'] + 1 < gridColCount and grid[curr['row']][curr['col'] + 1] == 1:
-                            candidates.append(
-                                {'row': curr['row'], 'col': curr['col'] + 1})
-                    if currentArea > maxArea:
-                        maxArea = currentArea
+        seen = set()
+        rowCount = len(grid)
+        colCount = len(grid[0])
+
+        def getArea(rowIndex, colIndex):
+            if rowIndex < 0:
+                return 0
+            if colIndex < 0:
+                return 0
+            if rowIndex >= rowCount:
+                return 0
+            if colIndex >= colCount:
+                return 0
+            if (rowIndex, colIndex) in seen:
+                return 0
+            if grid[rowIndex][colIndex] == 0:
+                return 0
+            seen.add(( rowIndex, colIndex ))
+            return 1 + getArea(rowIndex, colIndex + 1) + getArea(rowIndex, colIndex - 1) + getArea(rowIndex + 1, colIndex) + getArea(rowIndex - 1, colIndex)
+
+        for rowIndex in range(rowCount):
+            for colIndex in range(colCount):
+                currentArea = getArea(rowIndex, colIndex)
+                if currentArea > maxArea:
+                    maxArea = currentArea
         return maxArea
 
 
