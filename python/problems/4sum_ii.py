@@ -1,7 +1,7 @@
 """
 https://leetcode.com/problems/4sum-ii/
 
-
+https://leetcode.com/submissions/detail/139449882/
 """
 
 
@@ -14,13 +14,20 @@ class Solution(object):
         :type D: List[int]
         :rtype: int
         """
+        dic = dict()
         count = 0
         for a in A:
             for b in B:
-                for c in C:
-                    for d in D:
-                        if a + b + c + d == 0:
-                            count += 1
+                s = a + b
+                if s in dic:
+                    dic[s] += 1
+                else:
+                    dic[s] = 1
+        for c in C:
+            for d in D:
+                s = c + d
+                if -s in dic:
+                    count += dic[-s]
         return count
 
 
