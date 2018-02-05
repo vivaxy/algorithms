@@ -52,3 +52,7 @@ class Test(unittest.TestCase):
         solution = Solution(listNode1)
         solution.getRandom()
         self.assertEqual(0, 0)
+
+
+if __name__ == '__main__':
+    unittest.test()

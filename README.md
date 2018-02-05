@@ -1,3 +1,3 @@
 # Algorithms
 
-Leetcode algorithms
+[Leetcode](https://leetcode.com/vivaxy/) algorithms
