@@ -73,6 +73,7 @@ class Solution(object):
             node = node.next
         return ans.val
 
+
 import unittest
 
 
