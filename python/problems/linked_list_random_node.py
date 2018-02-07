@@ -1,7 +1,8 @@
 """
 https://leetcode.com/problems/linked-list-random-node/
 
-
+https://leetcode.com/submissions/detail/139767568/
+https://leetcode.com/submissions/detail/139768870/
 """
 
 # Definition for singly-linked list.
@@ -11,6 +12,39 @@ https://leetcode.com/problems/linked-list-random-node/
 #         self.next = None
 
 from common.list_node import ListNode
+import random
+
+
+class Solution1(object):
+
+    def __init__(self, head):
+        """
+        @param head The linked list's head.
+        Note that the head is guaranteed to be not null, so it contains at least one node.
+        :type head: ListNode
+        """
+        self.head = head
+        self.length = 0
+        node = head
+        while node:
+            node = node.next
+            self.length += 1
+
+    def getRandom(self):
+        """
+        Returns a random node's value.
+        :rtype: int
+        """
+        index = random.randrange(0, self.length)
+        node = self.head
+        while index:
+            node = node.next
+            index -= 1
+        return node.val
+
+# Your Solution object will be instantiated and called as such:
+# obj = Solution(head)
+# param_1 = obj.getRandom()
 
 
 class Solution(object):
@@ -22,23 +56,22 @@ class Solution(object):
         :type head: ListNode
         """
         self.head = head
-        self.current = head
 
     def getRandom(self):
         """
         Returns a random node's value.
         :rtype: int
         """
-        prev = self.current
-        self.current = prev.next
-        if self.current == None:
-            self.current = self.head
-        return prev.val
-
-# Your Solution object will be instantiated and called as such:
-# obj = Solution(head)
-# param_1 = obj.getRandom()
-
+        ans = self.head
+        index = 1
+        node = ans.next
+        while node:
+            value = random.randrange(0, index + 1)
+            if value == 0:
+                ans = node
+            index += 1
+            node = node.next
+        return ans.val
 
 import unittest
 
@@ -46,12 +79,8 @@ import unittest
 class Test(unittest.TestCase):
     def test(self):
         listNode1 = ListNode(1)
-        listNode1.next = ListNode(2)
-        listNode1.next.next = ListNode(3)
-
         solution = Solution(listNode1)
-        solution.getRandom()
-        self.assertEqual(0, 0)
+        self.assertEqual(solution.getRandom(), 1)
 
 
 if __name__ == '__main__':
