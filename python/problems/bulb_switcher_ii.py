@@ -1,11 +1,11 @@
 """
 https://leetcode.com/problems/bulb-switcher-ii/description/
 
-
+https://leetcode.com/submissions/detail/140962396/
 """
 
 
-class Solution:
+class Solution1:
     def flipLights(self, n, m):
         """
         :type n: int
@@ -44,7 +44,8 @@ class Solution:
         def flipLights(actions):
             lights = [True] * n
             for action in actions:
-                lights = list(map(action, lights, list(range(1, len(lights) + 1))))
+                lights = list(
+                    map(action, lights, list(range(1, len(lights) + 1))))
             status.add(stringifyLights(lights))
 
         def traverse(steps):
@@ -54,6 +55,28 @@ class Solution:
                 traverse(steps + [action])
         traverse([])
         return len(status)
+
+
+class Solution:
+    def flipLights(self, n, m):
+        """
+        :type n: int
+        :type m: int
+        :rtype: int
+        """
+        if m == 0:
+            return 1
+        if n == 1:
+            return 2
+        if n == 2:
+            if m == 1:
+                return 3
+            return 4
+        if m == 1:
+            return 4
+        if m == 2:
+            return 7
+        return 8
 
 
 import unittest
