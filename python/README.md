@@ -4,4 +4,4 @@
 
 # Run Single Testcase
 
-`> python3 -m unittest discover -s "problems" -p "binary_tree_inorder_traversal.py"`
+`> python3 -m unittest discover -s "problems" -p "reverse_linked_list.py"`
