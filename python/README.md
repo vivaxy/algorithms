@@ -4,4 +4,4 @@
 
 # Run Single Testcase
 
-`> python3 -m unittest discover -s "problems" -p "rotated_digits.py"`
+`> python3 -m unittest discover -s "problems" -p "rabbits_in_forest.py"`
