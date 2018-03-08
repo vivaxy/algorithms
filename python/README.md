@@ -4,4 +4,4 @@
 
 # Run Single Testcase
 
-`> python3 -m unittest discover -s "problems" -p "maximum_xor_of_two_numbers_in_an_array.py"`
+`> python3 -m unittest discover -s "problems" -p "split_linked_list_in_parts.py"`
