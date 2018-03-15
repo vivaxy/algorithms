@@ -4,4 +4,4 @@
 
 # Run Single Testcase
 
-`> python3 -m unittest discover -s "problems" -p "all_paths_from_source_to_target.py"`
+`> python3 -m unittest discover -s "problems" -p "rotate_string.py"`
