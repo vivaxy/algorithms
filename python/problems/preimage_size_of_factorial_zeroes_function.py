@@ -1,7 +1,7 @@
 """
 https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/description/
 
-
+https://leetcode.com/submissions/detail/145351406/
 """
 
 
