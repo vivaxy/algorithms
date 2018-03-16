@@ -4,4 +4,4 @@
 
 # Run Single Testcase
 
-`> python3 -m unittest discover -s "problems" -p "rotate_string.py"`
+`> python3 -m unittest discover -s "problems" -p "preimage_size_of_factorial_zeroes_function.py"`
