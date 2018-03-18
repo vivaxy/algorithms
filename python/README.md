@@ -4,4 +4,4 @@
 
 # Run Single Testcase
 
-`> python3 -m unittest discover -s "problems" -p "generate_parentheses.py"`
+`> python3 -m unittest discover -s "problems" -p "count_factors.py"`
