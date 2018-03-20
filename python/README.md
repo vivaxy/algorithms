@@ -4,4 +4,4 @@
 
 # Run Single Testcase
 
-`> python3 -m unittest discover -s "problems" -p "replace_words.py"`
+`> python3 -m unittest discover -s "problems" -p "maximum_length_of_pair_chain.py"`
