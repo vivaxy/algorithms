@@ -16,7 +16,6 @@ class Solution:
             [count, domain] = cpdomain.split(' ')
             count = int(count)
             domains = domain.split('.')
-            print(count, domains)
             domain = ''
             for index in range(len(domains)):
                 domain = '.'.join(domains[index:])
