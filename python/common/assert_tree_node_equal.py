@@ -1,4 +1,10 @@
 def assertTreeNodeEqual(tree1, tree2):
+    if tree1 == None and tree2 != None:
+        print(str(tree1) + ' != ' + str(tree2.val))
+        return False
+    if tree1 != None and tree2 == None:
+        print(str(tree1.val) + ' != ' + str(tree2))
+        return False
     if tree1.val != tree2.val:
         print(str(tree1.val) + ' != ' + str(tree2.val))
         return False
