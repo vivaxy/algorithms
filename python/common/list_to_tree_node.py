@@ -1,4 +1,4 @@
-from tree_node import TreeNode
+from .tree_node import TreeNode
 
 
 def listToTreeNode(l):
