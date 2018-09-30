@@ -1,4 +1,11 @@
 filename=`echo $1 | sed -e "s/-/_/g"`
+
+if [ -z ${filename} ]
+then
+    echo "Filename required."
+    exit 1
+fi
+
 echo "\"\"\"
 https://leetcode.com/problems/${1}/description/
 

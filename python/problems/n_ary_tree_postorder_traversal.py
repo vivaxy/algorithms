@@ -5,10 +5,7 @@ https://leetcode.com/submissions/detail/179182067/
 """
 
 
-class Node(object):
-    def __init__(self, val, children):
-        self.val = val
-        self.children = children
+from common.n_ary_tree_node import Node
 
 
 class Solution(object):
