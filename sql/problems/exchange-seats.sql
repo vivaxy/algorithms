@@ -1,5 +1,5 @@
 /*
-https://leetcode.com/problems/exchange-seats/description/
+https://leetcode.com/problems/exchange-seats/
 
 https://leetcode.com/submissions/detail/143029079/
 */
