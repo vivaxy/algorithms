@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/degree-of-an-array/description/
+https://leetcode.com/problems/degree-of-an-array/
 
 https://leetcode.com/submissions/detail/130966108/
 """

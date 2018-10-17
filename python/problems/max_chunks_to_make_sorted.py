@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/max-chunks-to-make-sorted/description/
+https://leetcode.com/problems/max-chunks-to-make-sorted/
 
 https://leetcode.com/submissions/detail/146477240/
 """

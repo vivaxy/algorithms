@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/split-linked-list-in-parts/description/
+https://leetcode.com/problems/split-linked-list-in-parts/
 
 https://leetcode.com/submissions/detail/144005053/
 """

@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/my-calendar-iii/description/
+https://leetcode.com/problems/my-calendar-iii/
 
 https://leetcode.com/submissions/detail/139013850/
 """

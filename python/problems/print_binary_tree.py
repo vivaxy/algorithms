@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/print-binary-tree/description/
+https://leetcode.com/problems/print-binary-tree/
 
 https://leetcode.com/submissions/detail/132220547/
 """

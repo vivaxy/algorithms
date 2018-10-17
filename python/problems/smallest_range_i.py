@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/smallest-range-i/description/
+https://leetcode.com/problems/smallest-range-i/
 
 https://leetcode.com/submissions/detail/178282314/
 """

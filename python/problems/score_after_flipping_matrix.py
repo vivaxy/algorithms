@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/score-after-flipping-matrix/description/
+https://leetcode.com/problems/score-after-flipping-matrix/
 
 https://leetcode.com/submissions/detail/176979117/
 """

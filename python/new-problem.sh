@@ -7,7 +7,7 @@ then
 fi
 
 echo "\"\"\"
-https://leetcode.com/problems/${1}/description/
+https://leetcode.com/problems/${1}/
 
 
 \"\"\"

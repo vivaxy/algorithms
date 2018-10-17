@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/projection-area-of-3d-shapes/description/
+https://leetcode.com/problems/projection-area-of-3d-shapes/
 
 https://leetcode.com/submissions/detail/177472226/
 """

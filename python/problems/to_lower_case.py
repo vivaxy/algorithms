@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/to-lower-case/description/
+https://leetcode.com/problems/to-lower-case/
 
 https://leetcode.com/submissions/detail/175937795/
 """

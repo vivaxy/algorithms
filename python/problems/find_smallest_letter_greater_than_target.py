@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
+https://leetcode.com/problems/find-smallest-letter-greater-than-target/
 
 https://leetcode.com/submissions/detail/131676021/
 """

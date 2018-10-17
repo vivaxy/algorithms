@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/bulb-switcher-ii/description/
+https://leetcode.com/problems/bulb-switcher-ii/
 
 https://leetcode.com/submissions/detail/140962396/
 """

@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/description/
+https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
 
 https://leetcode.com/submissions/detail/143826044/
 """

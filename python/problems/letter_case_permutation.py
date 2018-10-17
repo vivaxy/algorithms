@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/letter-case-permutation/description/
+https://leetcode.com/problems/letter-case-permutation/
 
 https://leetcode.com/submissions/detail/142553115/
 """

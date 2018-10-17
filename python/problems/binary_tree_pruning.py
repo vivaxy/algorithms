@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/binary-tree-pruning/description/
+https://leetcode.com/problems/binary-tree-pruning/
 
 https://leetcode.com/submissions/detail/149147905/
 """

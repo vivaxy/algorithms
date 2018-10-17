@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/rotated-digits/description/
+https://leetcode.com/problems/rotated-digits/
 
 https://leetcode.com/submissions/detail/142723550/
 """

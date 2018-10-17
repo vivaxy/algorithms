@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/all-possible-full-binary-trees/description/
+https://leetcode.com/problems/all-possible-full-binary-trees/
 
 https://leetcode.com/submissions/detail/177298207/
 """

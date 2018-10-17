@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/number-of-lines-to-write-string/description/
+https://leetcode.com/problems/number-of-lines-to-write-string/
 
 https://leetcode.com/submissions/detail/147297163/
 """

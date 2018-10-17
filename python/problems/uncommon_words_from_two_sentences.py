@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/uncommon-words-from-two-sentences/description/
+https://leetcode.com/problems/uncommon-words-from-two-sentences/
 
 https://leetcode.com/submissions/detail/182166803/
 """

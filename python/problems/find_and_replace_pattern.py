@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/find-and-replace-pattern/description/
+https://leetcode.com/problems/find-and-replace-pattern/
 
 https://leetcode.com/submissions/detail/175947780/
 """

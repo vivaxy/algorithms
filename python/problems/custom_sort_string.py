@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/custom-sort-string/description/
+https://leetcode.com/problems/custom-sort-string/
 
 https://leetcode.com/submissions/detail/142301270/
 https://leetcode.com/submissions/detail/142463607/

@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/beautiful-arrangement-ii/description/
+https://leetcode.com/problems/beautiful-arrangement-ii/
 
 https://leetcode.com/submissions/detail/131456129/
 """

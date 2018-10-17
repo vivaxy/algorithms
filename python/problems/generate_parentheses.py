@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/generate-parentheses/description/
+https://leetcode.com/problems/generate-parentheses/
 
 https://leetcode.com/submissions/detail/145650277/
 """

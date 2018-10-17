@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/spiral-matrix-iii/description/
+https://leetcode.com/problems/spiral-matrix-iii/
 
 https://leetcode.com/submissions/detail/178784709/
 """

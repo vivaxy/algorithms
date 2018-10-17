@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/binary-tree-inorder-traversal/description/
+https://leetcode.com/problems/binary-tree-inorder-traversal/
 
 https://leetcode.com/submissions/detail/141037270/
 """

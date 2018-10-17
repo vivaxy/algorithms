@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/n-queens/description/
+https://leetcode.com/problems/n-queens/
 
 https://leetcode.com/submissions/detail/144845461/
 """

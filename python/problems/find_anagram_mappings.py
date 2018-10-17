@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/find-anagram-mappings/description/
+https://leetcode.com/problems/find-anagram-mappings/
 
 https://leetcode.com/submissions/detail/135434308/
 """

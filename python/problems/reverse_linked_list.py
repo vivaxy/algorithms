@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/reverse-linked-list/description/
+https://leetcode.com/problems/reverse-linked-list/
 
 https://leetcode.com/submissions/detail/141140132/
 """

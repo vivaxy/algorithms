@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/maximum-binary-tree/description/
+https://leetcode.com/problems/maximum-binary-tree/
 
 https://leetcode.com/submissions/detail/117135480/
 """

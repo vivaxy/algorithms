@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/1-bit-and-2-bit-characters/description/
+https://leetcode.com/problems/1-bit-and-2-bit-characters/
 
 https://leetcode.com/submissions/detail/130474783/
 """

@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/replace-words/description/
+https://leetcode.com/problems/replace-words/
 
 https://leetcode.com/submissions/detail/145826790/
 """

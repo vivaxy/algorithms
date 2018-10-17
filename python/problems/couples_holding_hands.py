@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/couples-holding-hands/description/
+https://leetcode.com/problems/couples-holding-hands/
 
 https://leetcode.com/submissions/detail/143499206/
 """

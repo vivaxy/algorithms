@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/partition-labels/description/
+https://leetcode.com/problems/partition-labels/
 
 https://leetcode.com/submissions/detail/136359351/
 """

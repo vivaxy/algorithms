@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/unique-morse-code-words/description/
+https://leetcode.com/problems/unique-morse-code-words/
 
 https://leetcode.com/submissions/detail/147142806/
 """

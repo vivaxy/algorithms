@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/baseball-game/description/
+https://leetcode.com/problems/baseball-game/
 
 https://leetcode.com/submissions/detail/129471355/
 """

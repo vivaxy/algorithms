@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/max-increase-to-keep-city-skyline/description/
+https://leetcode.com/problems/max-increase-to-keep-city-skyline/
 
 https://leetcode.com/submissions/detail/146961062/
 """

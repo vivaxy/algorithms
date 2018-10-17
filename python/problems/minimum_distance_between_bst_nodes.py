@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/
+https://leetcode.com/problems/minimum-distance-between-bst-nodes/
 
 https://leetcode.com/submissions/detail/148988804/
 """

@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/transpose-matrix/description/
+https://leetcode.com/problems/transpose-matrix/
 
 https://leetcode.com/submissions/detail/162828786/
 """

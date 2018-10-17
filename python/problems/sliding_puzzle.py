@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/sliding-puzzle/description/
+https://leetcode.com/problems/sliding-puzzle/
 
 https://leetcode.com/submissions/detail/138734643/
 """

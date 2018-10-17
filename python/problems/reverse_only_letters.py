@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/reverse-only-letters/description/
+https://leetcode.com/problems/reverse-only-letters/
 
 https://leetcode.com/submissions/detail/181196020/
 """

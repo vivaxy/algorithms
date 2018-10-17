@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/implement-magic-dictionary/description/
+https://leetcode.com/problems/implement-magic-dictionary/
 
 
 """

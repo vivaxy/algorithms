@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/flipping-an-image/description/
+https://leetcode.com/problems/flipping-an-image/
 
 https://leetcode.com/submissions/detail/176060521/
 """

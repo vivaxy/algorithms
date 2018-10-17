@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/encode-and-decode-tinyurl/description/
+https://leetcode.com/problems/encode-and-decode-tinyurl/
 
 https://leetcode.com/submissions/detail/131094266/
 """

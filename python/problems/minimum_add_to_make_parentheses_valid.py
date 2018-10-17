@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/
+https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/
 
 https://leetcode.com/submissions/detail/182907873/
 """

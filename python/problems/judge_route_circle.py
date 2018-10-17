@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/judge-route-circle/description/
+https://leetcode.com/problems/judge-route-circle/
 
 https://leetcode.com/submissions/detail/129339056/
 https://leetcode.com/submissions/detail/129339394/

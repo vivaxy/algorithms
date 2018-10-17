@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/rabbits-in-forest/description/
+https://leetcode.com/problems/rabbits-in-forest/
 
 https://leetcode.com/submissions/detail/142931373/
 """

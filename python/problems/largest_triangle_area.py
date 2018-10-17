@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/largest-triangle-area/description/
+https://leetcode.com/problems/largest-triangle-area/
 
 https://leetcode.com/submissions/detail/149320592/
 """

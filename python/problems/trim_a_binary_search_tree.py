@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/trim-a-binary-search-tree/description/
+https://leetcode.com/problems/trim-a-binary-search-tree/
 
 https://leetcode.com/submissions/detail/129562825/
 """

@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/shortest-completing-word/description/
+https://leetcode.com/problems/shortest-completing-word/
 
 https://leetcode.com/submissions/detail/132960422/
 """

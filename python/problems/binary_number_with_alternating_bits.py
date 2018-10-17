@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/binary-number-with-alternating-bits/description/
+https://leetcode.com/problems/binary-number-with-alternating-bits/
 
 https://leetcode.com/submissions/detail/129676755/
 """

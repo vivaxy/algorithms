@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/number-of-boomerangs/description/
+https://leetcode.com/problems/number-of-boomerangs/
 
 https://leetcode.com/submissions/detail/150036781/
 """

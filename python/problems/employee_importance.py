@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/employee-importance/description/
+https://leetcode.com/problems/employee-importance/
 
 https://leetcode.com/submissions/detail/129814911/
 """

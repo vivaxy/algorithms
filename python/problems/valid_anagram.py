@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/valid-anagram/description/
+https://leetcode.com/problems/valid-anagram/
 
 https://leetcode.com/submissions/detail/130841292/
 """

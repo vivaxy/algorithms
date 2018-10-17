@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/groups-of-special-equivalent-strings/description/
+https://leetcode.com/problems/groups-of-special-equivalent-strings/
 
 https://leetcode.com/submissions/detail/181442598/
 """

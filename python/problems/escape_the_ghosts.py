@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/escape-the-ghosts/description/
+https://leetcode.com/problems/escape-the-ghosts/
 
 https://leetcode.com/submissions/detail/148753087/
 """

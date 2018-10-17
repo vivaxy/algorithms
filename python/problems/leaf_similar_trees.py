@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/leaf-similar-trees/description/
+https://leetcode.com/problems/leaf-similar-trees/
 
 https://leetcode.com/submissions/detail/181931434/
 """

@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/max-area-of-island/description/
+https://leetcode.com/problems/max-area-of-island/
 
 https://leetcode.com/submissions/detail/139333744/
 """

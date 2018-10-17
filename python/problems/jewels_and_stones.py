@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/jewels-and-stones/description/
+https://leetcode.com/problems/jewels-and-stones/
 
 https://leetcode.com/submissions/detail/138688434/
 """

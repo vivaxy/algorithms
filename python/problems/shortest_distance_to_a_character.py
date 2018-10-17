@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/shortest-distance-to-a-character/description/
+https://leetcode.com/problems/shortest-distance-to-a-character/
 
 https://leetcode.com/submissions/detail/181688766/
 """

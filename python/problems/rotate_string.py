@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/rotate-string/description/
+https://leetcode.com/problems/rotate-string/
 
 https://leetcode.com/submissions/detail/145178981/
 """

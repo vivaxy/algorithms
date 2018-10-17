@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/count-binary-substrings/description/
+https://leetcode.com/problems/count-binary-substrings/
 
 https://leetcode.com/submissions/detail/130289823/
 """

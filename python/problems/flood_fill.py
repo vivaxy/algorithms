@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/flood-fill/description/
+https://leetcode.com/problems/flood-fill/
 
 https://leetcode.com/submissions/detail/130734501/
 """

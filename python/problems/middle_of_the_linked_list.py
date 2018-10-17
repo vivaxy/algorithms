@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/middle-of-the-linked-list/description/
+https://leetcode.com/problems/middle-of-the-linked-list/
 
 https://leetcode.com/submissions/detail/177596232/
 """

@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/permutations/description/
+https://leetcode.com/problems/permutations/
 
 https://leetcode.com/submissions/detail/148835681/
 """

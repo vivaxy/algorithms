@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/n-ary-tree-postorder-traversal/description/
+https://leetcode.com/problems/n-ary-tree-postorder-traversal/
 
 https://leetcode.com/submissions/detail/179182067/
 """

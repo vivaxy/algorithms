@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/description/
+https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/
 
 https://leetcode.com/submissions/detail/136983639/
 """

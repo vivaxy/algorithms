@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/sort-array-by-parity/description/
+https://leetcode.com/problems/sort-array-by-parity/
 
 https://leetcode.com/submissions/detail/176526312/
 """

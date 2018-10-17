@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/smallest-good-base/description/
+https://leetcode.com/problems/smallest-good-base/
 
 
 """

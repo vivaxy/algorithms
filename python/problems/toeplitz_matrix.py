@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/toeplitz-matrix/description/
+https://leetcode.com/problems/toeplitz-matrix/
 
 https://leetcode.com/submissions/detail/137278039/
 """

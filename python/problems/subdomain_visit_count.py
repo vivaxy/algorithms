@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/subdomain-visit-count/description/
+https://leetcode.com/problems/subdomain-visit-count/
 
 https://leetcode.com/submissions/detail/148073410/
 """

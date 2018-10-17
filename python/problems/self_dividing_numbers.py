@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/self-dividing-numbers/description/
+https://leetcode.com/problems/self-dividing-numbers/
 
 https://leetcode.com/submissions/detail/129238510/
 """

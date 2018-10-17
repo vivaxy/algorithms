@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/binary-gap/description/
+https://leetcode.com/problems/binary-gap/
 
 https://leetcode.com/submissions/detail/182434177/
 https://leetcode.com/submissions/detail/182434882/

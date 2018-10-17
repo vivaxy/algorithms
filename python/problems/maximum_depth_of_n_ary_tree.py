@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/maximum-depth-of-n-ary-tree/description/
+https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
 
 https://leetcode.com/submissions/detail/179391559/
 """
