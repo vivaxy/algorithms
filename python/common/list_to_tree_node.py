@@ -25,10 +25,15 @@ def listToTreeNode(l):
         if i == None:
             left = True
             parents.pop(0)
+            while not parents[0]:
+                parents.pop(0)
             parents.append(None)
             continue
         node = TreeNode(i)
-        parents.pop(0).right = node
+        parent = parents.pop(0)
+        while not parent:
+            parent = parents.pop(0)
+        parent.right = node
         parents.append(node)
         left = True
     return root
