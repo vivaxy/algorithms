@@ -1,7 +1,7 @@
 """
 https://leetcode.com/problems/available-captures-for-rook/
 
-
+https://leetcode.com/submissions/detail/214865227/
 """
 
 from typing import List
