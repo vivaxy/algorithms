@@ -3,48 +3,42 @@
 
 """
 
+from typing import List
 
-def quickSort(a, start, end):
-    """
-    :type a: List[int]
-    :type start: int
-    :type end: int
-    "rtype: List[int]
-    """
-    i = start
-    j = end
-    k = a[i]
-    # print('group: a = ' + str(a) + ', start = ' +
-    #       str(start) + ', end = ' + str(end))
 
-    # print('    step: from j = ' + str(j) +
-    #       ' to start, find the first item lower than k = ' + str(k))
-    while i < j:
-        while i < j and k <= a[j]:
-            # print('        j = ' + str(j) + ', a[j] = ' + str(a[j]))
-            j -= 1
-        temp = a[j]
-        a[j] = k
-        a[i] = temp
-        # print('        switch k and a[j]: i = ' +
-        #     str(i) + ', j = ' + str(j) + ', a = ' + str(a))
+def quickSort(A: List[int], start: int, end: int) -> List[int]:
+    if start >= end:
+        return A
+    k = partition(A, start, end)
+    quickSort(A, start, k - 1)
+    quickSort(A, k + 1, end)
+    return A
 
-        # print('    step: from i = ' + str(i) +
-        #     ' to end, find the first item greater than k = ' + str(k))
-        while i < j and k >= a[i]:
-            # print('        i = ' + str(i) + ', a[i] = ' + str(a[i]))
+
+def partition(A: List[int], start: int, end: int) -> int:
+    v, i, j = A[start], start, end
+    while True:
+        while True:
+            if A[i] > v:
+                break
+            if i == end:
+                break
             i += 1
-        temp = a[i]
-        a[i] = k
-        a[j] = temp
-        # print('        switch k and a[i]: i = ' +
-        #     str(i) + ', j = ' + str(j) + ', a = ' + str(a))
-    # print('group end: i = ' + str(i) + ', j = ' + str(j) + ' meets')
-    if start < i - 1:
-        quickSort(a, start, i - 1)
-    if end > i + 1:
-        quickSort(a, i + 1, end)
-    return a
+        while True:
+            if A[j] < v:
+                break
+            if j == start:
+                break
+            j -= 1
+        if i >= j:
+            break
+        exchange(A, i, j)
+    exchange(A, start, j) #! exchange start and j
+    return j #! return pivot
+
+
+def exchange(A: List[int], i: int, j: int):
+    A[i], A[j] = A[j], A[i]
 
 
 import unittest
