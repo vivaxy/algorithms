@@ -6,6 +6,9 @@ def listToTreeNode(l: List) -> TreeNode:
     root = None
     parents = []
     isLeft = True
+    def popNone() -> None:
+        while len(parents) and parents[0] == None:
+            parents.pop(0)
     for i in l:
         if root == None:
             if i == None:
@@ -15,12 +18,12 @@ def listToTreeNode(l: List) -> TreeNode:
             continue
         if isLeft:
             if i == None:
-                while len(parents) and parents[0] == None:
-                    parents.pop(0)
+                popNone()
                 isLeft = False
                 parents.append(None)
                 continue
             node = TreeNode(i)
+            popNone()
             parents[0].left = node
             parents.append(node)
             isLeft = False
@@ -28,14 +31,12 @@ def listToTreeNode(l: List) -> TreeNode:
         if i == None:
             isLeft = True
             parents.pop(0)
-            while not parents[0]:
-                parents.pop(0)
+            popNone()
             parents.append(None)
             continue
         node = TreeNode(i)
+        popNone()
         parent = parents.pop(0)
-        while not parent:
-            parent = parents.pop(0)
         parent.right = node
         parents.append(node)
         isLeft = True
