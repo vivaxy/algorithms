@@ -1,3 +1,4 @@
+from functools import lru_cache
 import unittest
 """
 https://leetcode.com/problems/minimum-cost-for-tickets/
@@ -8,7 +9,7 @@ https://leetcode.com/submissions/detail/227086131/
 from typing import List
 
 
-class Solution:
+class Solution1:
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
         self.memo = dict()
         # dp(i) = min(dp(i + 1) + costs[0], dp(i + 7) + costs[1], dp[i + 30] + costs[2])
@@ -27,6 +28,19 @@ class Solution:
             self.memo[day] = ans
             return ans
         return dp(1)
+
+
+class Solution:
+    def mincostTickets(self, days: List[int], costs: List[int]) -> int:
+
+        @lru_cache(None)
+        def dp(day: int) -> int:
+            if day <= 0:
+                return 0
+            if day in days:
+                return min(dp(day - 1) + costs[0], dp(day - 7) + costs[1], dp(day - 30) + costs[2])
+            return dp(day - 1)
+        return dp(365)
 
 
 class Test(unittest.TestCase):
